@@ -1,17 +1,17 @@
 <?php
 
-namespace Simon\Projet4\Model;
+/*namespace Simon\Projet4\Model;*/
 
 class Manager
 {
 
-    protected $db;
+    protected $database;
 
 	public function __construct()
 	{
 		try
 		{
-			$this->db = new PDO('mysql:host=localhost;port=3306;dbname=mabase;charset=utf8', 'root', '');
+			$this->database = new PDO('mysql:host=localhost;port=3306;dbname=projet4;charset=utf8', 'root', '');
 		}
 		catch(Exception $e)
 		{

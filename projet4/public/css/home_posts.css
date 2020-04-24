@@ -1,0 +1,18 @@
+section#articles
+{
+    padding-top: 5%;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.newPost
+{
+    flex: 1;
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+}

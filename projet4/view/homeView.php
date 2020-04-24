@@ -13,19 +13,19 @@
 
       <div class="slide slide1">
         <div class="slide-content">
-          <span>Img one</span>
+          <span>Billet simple pour l'Alaska</span>
         </div>
       </div>
 
       <div class="slide slide2">
         <div class="slide-content">
-          <span>Img two</span>
+          <span><i>"Quand tu regardes l'Alaska, l'Alaska regarde aussi en toi."</i></span>
         </div>
       </div>
       
       <div class="slide slide3">
         <div class="slide-content">
-          <span>Img three</span>
+          <span><i>"Ce que j'ai fais le jure, aucune autre bete au monde ne l'aurait fait..."</i></span>
         </div>
       </div>
 
@@ -41,10 +41,27 @@
 
 <section id="articles">
 
-
-
-<?php  var_dump($posts);?>
-
+<?php
+while ($data = $posts->fetch())
+{
+?>
+    <div class="newPost">
+        <h3>
+            <?= htmlspecialchars($data['author']) ?>
+            <?= htmlspecialchars($data['title']) ?>
+            <em>le <?= $data['date_post_fr'] ?></em>
+        </h3>
+        
+        <p>
+            <?= nl2br(htmlspecialchars($data['content'])) ?>
+            <br />
+            <em><a href="index.php?action=post&amp;id=<?= $data['id'] ?>">Commentaires</a></em>
+        </p>
+    </div>
+<?php
+}
+$posts->closeCursor();
+?>
 
 
 </section>

@@ -2,16 +2,22 @@
 
 require_once("model/PostManager.php");
 
-getPosts();
-/*function listPosts()
+
+function listPosts()
 {
-    $postManager = new Simon\Projet4\Model\PostManager();
-    $posts = $postManager -> getPosts();
+    $postManager = new PostManager();
+    $postManager->getPosts();
+
+    $posts = $postManager->getPosts();
  
-    var_dump(getPosts());
     require_once("view/homeView.php");
 }
 
-require_once("view/homeView.php");*/
+
+listPosts();
+
+
+
+require_once("view/homeView.php");
 
 

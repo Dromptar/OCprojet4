@@ -13,19 +13,25 @@
 
       <div class="slide slide1">
         <div class="slide-content">
-          <span>Billet simple pour l'Alaska</span>
+          <span>Jean Forteroche : "Billet simple pour l'Alaska"</span>
         </div>
       </div>
 
       <div class="slide slide2">
         <div class="slide-content">
-          <span><i>"Quand tu regardes l'Alaska, l'Alaska regarde aussi en toi."</i></span>
+          <span>Jean Forteroche : "Billet simple pour l'Alaska"</span>
+        </div>
+      </div>
+
+      <div class="slide slide3">
+        <div class="slide-content">
+          <span>Jean Forteroche : "Billet simple pour l'Alaska"</span>
         </div>
       </div>
       
-      <div class="slide slide3">
+      <div class="slide slide4">
         <div class="slide-content">
-          <span><i>"Ce que j'ai fais le jure, aucune autre bete au monde ne l'aurait fait..."</i></span>
+          <span>Jean Forteroche : "Billet simple pour l'Alaska"</span>
         </div>
       </div>
 
@@ -35,34 +41,69 @@
 
   </div>
 
-  </section>
+</section>
 
-  <script src="public/js/Slider.js"></script>
+
+
+<script src="public/js/Slider.js"></script>
+
+<a href="#author-bio"><i class='fa fa-angle-double-down' id='scroll-icon'></i></a>
+
+<section id="author-bio">
+
+  <div id="picture">
+    <img src="public/images/writer.jpg" alt="writer">
+  
+  </div>
+  
+  <div id="bio">
+    <h3>Un petit mot sur l'auteur ...</h3>
+    <p>
+      Jean Forteroche est un écrivain, poète, philologue, essayiste et professeur d’université britannique, 
+      né le 3 janvier 1892 à Bloemfontein et mort le 2 septembre 1973 à Bournemouth. Après 
+      des études à Birmingham et à Oxford et l’expérience traumatisante de la Première Guerre mondiale. 
+      Durant sa carrière universitaire, il défend l’apprentissage des langues, surtout germaniques,
+      et bouleverse l’étude du poème anglo-saxon Beowulf avec sa conférence Beowulf : Les Monstres et les Critiques (1936).
+      Son essai Du conte de fées (1939) est également considéré comme un texte crucial dans l’étude de ce genre littéraire.
+    </p>
+  </div>
+
+</section>
 
 <section id="articles">
 
 <?php
-while ($data = $posts->fetch())
+
+while ($data = $lastPosts->fetch())
 {
 ?>
     <div class="newPost">
+        
         <h3>
-            <?= htmlspecialchars($data['author']) ?>
-            <?= htmlspecialchars($data['title']) ?>
-            <em>le <?= $data['date_post_fr'] ?></em>
+            <!--<?= htmlspecialchars($data['author']) ?>!-->
+            <?= nl2br($data['title']) ?>
+            <br/>
+            <!--<i class="fas fa-book-open"></i>!-->
         </h3>
         
         <p>
-            <?= nl2br(htmlspecialchars($data['content'])) ?>
-            <br />
-            <em><a href="index.php?action=post&amp;id=<?= $data['id'] ?>">Commentaires</a></em>
+            <!--<?= nl2br(substr($data['content'], 0, 300)) ?>!-->
+                <?= nl2br($data['quote']) ?>
+            <br/>
         </p>
+        <p>
+            <a href="">Lire le chapitre</a>
+            <!--<br />
+            <em><a href="index.php?action=post&amp;id=<?= $data['id'] ?>">Commentaires</a></em>!-->
+        </p>
+        <p id="date"><em>Le <?= $data['date_post_fr'] ?></em></p>
     </div>
 <?php
 }
-$posts->closeCursor();
-?>
 
+$lastPosts->closeCursor();
+
+?>
 
 </section>
 

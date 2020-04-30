@@ -1,0 +1,65 @@
+nav
+{
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+  
+}
+
+/*nav:hover
+{
+    background-color: #111;
+}
+*/
+
+#tabs
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    color: rgb(237,233,215);
+    font-size: 1.4em;
+    
+}
+
+#social
+{
+    height: 100px;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-between;
+    position: fixed;
+    top: 20%;
+    right: 1%;
+}
+
+nav ul
+{
+    padding: 0;
+}
+
+nav li
+{
+    padding-left: 30px;
+    font-family: 'roboto';
+}
+
+nav a
+{
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+nav a:visited
+{
+    color: white;
+}
+
+

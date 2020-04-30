@@ -3,21 +3,22 @@
 require_once("model/PostManager.php");
 
 
-function listPosts()
+function listLastPosts()
 {
     $postManager = new PostManager();
-    $postManager->getPosts();
+    $postManager->getLastPosts();
 
-    $posts = $postManager->getPosts();
+    $lastPosts = $postManager->getLastPosts();
  
     require_once("view/homeView.php");
 }
 
 
-listPosts();
+listLastPosts();
 
 
 
 require_once("view/homeView.php");
+
 
 

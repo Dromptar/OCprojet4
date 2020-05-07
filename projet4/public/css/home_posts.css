@@ -43,7 +43,7 @@ section#articles
     /*text-align: justify; */       
 }
 
-#date
+.date
 {
     text-align: center;
 }

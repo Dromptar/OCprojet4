@@ -11,10 +11,9 @@
 
         <nav id="menu">
             <ul id="tabs">
-                <li><i class="fas fa-home"></i><a href="">Home</a></li>
-                <li><a href="">Le blog</a></li>
-                <li><a href="">Mon espace</a></li>
-                <li><a href="">Déconnexion</a></li>
+                <li><i class="fas fa-home"></i><a href="index.php?url=home">Home</a></li>
+                <li><a href="index.php?url=blog">Les chapitres</a></li>
+                <li><a href="index.php?url=admin">Espace Admin</a></li>
             </ul>
 
         <ul id="social">
@@ -26,8 +25,6 @@
         </nav>
 
         <?= $content ?>
-
-        <script src="public/js/menu.js"></script>
 
     </body>
 </html>

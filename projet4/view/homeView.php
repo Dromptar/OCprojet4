@@ -57,7 +57,7 @@
   </div>
   
   <div id="bio">
-    <h3>Un petit mot sur l'auteur ...</h3>
+    <h2>Un petit mot sur l'auteur ...</h2>
     <p>
       Jean Forteroche est un écrivain, poète, philologue, essayiste et professeur d’université britannique, 
       né le 3 janvier 1892 à Bloemfontein et mort le 2 septembre 1973 à Bournemouth. Après 
@@ -70,7 +70,10 @@
 
 </section>
 
+
 <section id="articles">
+
+
 
 <?php
 
@@ -80,23 +83,18 @@ while ($data = $lastPosts->fetch())
     <div class="newPost">
         
         <h3>
-            <!--<?= htmlspecialchars($data['author']) ?>!-->
-            <?= nl2br($data['title']) ?>
-            <br/>
-            <!--<i class="fas fa-book-open"></i>!-->
+          <!--<?= htmlspecialchars($data['author']) ?>!-->
+          <?= nl2br($data['title']) ?>
+          <br/>
+          <!--<i class="fas fa-book-open"></i>!-->
         </h3>
         
         <p>
-            <!--<?= nl2br(substr($data['content'], 0, 300)) ?>!-->
-                <?= nl2br($data['quote']) ?>
-            <br/>
+          <?= nl2br($data['quote']) ?>
+          <br/>
         </p>
-        <p>
-            <a href="">Lire le chapitre</a>
-            <!--<br />
-            <em><a href="index.php?action=post&amp;id=<?= $data['id'] ?>">Commentaires</a></em>!-->
-        </p>
-        <p id="date"><em>Le <?= $data['date_post_fr'] ?></em></p>
+        <p class="date"><em>Le <?= $data['date_post_fr'] ?></em></p>
+        <a href="index.php?url=post&amp;id=<?= $data['id'] ?>">Lire le chapitre</a>
     </div>
 <?php
 }
@@ -107,7 +105,10 @@ $lastPosts->closeCursor();
 
 </section>
 
+<script src="public/js/menu.js"></script>
+
 
 <?php $content = ob_get_clean(); ?>
+
 
 <?php require('template.php'); ?>

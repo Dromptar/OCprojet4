@@ -33,10 +33,11 @@ section#author-bio
    flex-wrap: wrap;
    padding-left: 20px;
    text-align: justify;
-   color: rgb(237,233,215) 
+   color: rgb(237,233,215);
+   width: 60%;;
 }
 
-#bio h3
+#bio h2
 {
     font-family: 'roboto';
     text-align: center;

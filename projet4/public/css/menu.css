@@ -1,5 +1,6 @@
 nav
 {
+    top: 0;
     height: 60px;
     width: 100%;
     position: fixed;
@@ -29,7 +30,7 @@ nav
 #social
 {
     height: 100px;
-    color: white;
+    color: rgb(237,233,215);
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
@@ -59,7 +60,7 @@ nav a
 
 nav a:visited
 {
-    color: white;
+    color: rgb(237,233,215);
 }
 
 

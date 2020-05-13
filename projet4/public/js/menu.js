@@ -10,7 +10,7 @@ function navChange() {
 
     if (scrolling >= 654) {
 
-        document.getElementById('menu').style.backgroundColor = "#111";
+        document.getElementById('menu').style.backgroundColor = "rgb(33,30,31";
     } else {
         document.getElementById('menu').style.backgroundColor = "transparent";
     }
@@ -19,7 +19,7 @@ function navChange() {
 
 function mouseOver() {
 
-    document.getElementById('menu').style.backgroundColor = "#111";
+    document.getElementById('menu').style.backgroundColor = "rgb(33,30,31)";
 
   }
 

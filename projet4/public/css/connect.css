@@ -1,0 +1,30 @@
+
+#connect
+{
+    background-image: url("../images/admin.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center; 
+}
+
+#formulaire
+{
+    position: relative;
+    top: 50%;
+}
+
+form
+{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 12%;
+    margin: 0 auto;
+}
+
+form input
+{
+    
+}

@@ -5,12 +5,12 @@ body
 
 nav#menu
 {
-    background-color: rgb(17,17,17);
+    background-color: rgb(33,30,31);
 }
 
 section#posts
 {
-    background-image: linear-gradient(to top, rgb(228,131,58), rgb(241,153,52), rgb(244,164,96), rgb(246,191,153));
+    background-image: linear-gradient(to top,rgb(105,105,105), rgb(167, 168, 172)); 
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 10%;
@@ -64,5 +64,5 @@ section#posts
 
 .read-button a:visited
 {
-    color: rgb(17,17,17);
+    color: rgb(33,30,31);
 }

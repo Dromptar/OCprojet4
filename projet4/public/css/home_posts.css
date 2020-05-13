@@ -7,7 +7,7 @@ section#articles
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image: linear-gradient(to bottom, rgb(228,131,58), rgb(244,164,96), rgb(246,191,153));
+    background-image: linear-gradient(to bottom,rgb(55,55,55), rgb(105,105,105), rgb(167, 168, 172)); 
     /*background-color: rgb(244,164,96)*/
 }
 

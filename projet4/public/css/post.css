@@ -23,7 +23,8 @@ section#posts
     margin: 0;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-image: linear-gradient(to top, rgb(228,131,58), rgb(241,153,52), rgb(244,164,96), rgb(246,191,153));
+    border-bottom: 2px solid black;
+    /*background-image: linear-gradient(to top, rgb(228,131,58), rgb(241,153,52), rgb(244,164,96), rgb(246,191,153));*/
 }
 
 .solo-post
@@ -47,6 +48,7 @@ section#comments
 {
     background-image: linear-gradient(to bottom, rgb(33,31,78), rgb(84,71,157), rgb(164,162,182));
     padding-top: 5%;
+    padding-bottom: 5%;
     display: flex;
     flex-direction: column;
 }
@@ -59,11 +61,15 @@ section#comments aside
 
 aside#comment_display
 {
-    width: 70%;
+    width: 50%;
 }
 .new-comment
 {
+    padding: 0 10px;
     background-color: rgb(237,233,215);
     margin: 20px 0;
+    border: 1px solid white;
+    box-shadow: 5px 5px #373737;
+    border-radius: 10px;
 }
 

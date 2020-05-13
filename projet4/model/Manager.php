@@ -11,7 +11,7 @@ class Manager
 	{
 		try
 		{
-			$this->database = new PDO('mysql:host=localhost;port=3306;dbname=projet4;charset=utf8', 'root', '');
+			$this->database = new PDO('mysql:host=localhost;port=3306;dbname=projet4;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		}
 		catch(Exception $e)
 		{

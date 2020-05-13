@@ -40,4 +40,29 @@ body,
     src: url('../fonts/Roboto-Light.ttf');
 }
 
+footer
+{
+    color: rgb(237,233,215);
+    height: 150px;
+    background-color: rgb(33,30,31);
+    display: flex;
+    justify-content: space-around;
+}
 
+footer ul
+{
+    font-size: 1.2em;
+    padding: 0;
+    margin: auto 0;
+}
+
+footer li, a
+{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+footer a:visited
+{
+    color: rgb(237,233,215);
+}

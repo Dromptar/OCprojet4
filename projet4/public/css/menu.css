@@ -6,7 +6,7 @@ nav
     position: fixed;
     z-index: 11;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   
 }
 
@@ -16,7 +16,7 @@ nav
 }
 */
 
-#tabs
+#nav-tabs
 {
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ nav
     
 }
 
-#social
+#nav-social
 {
     height: 100px;
     color: rgb(237,233,215);
@@ -62,5 +62,18 @@ nav a:visited
 {
     color: rgb(237,233,215);
 }
+
+#logo
+{
+    margin: auto 0;
+}
+
+#logo img
+{
+    height: 50px;
+    width: auto;
+}
+
+
 
 

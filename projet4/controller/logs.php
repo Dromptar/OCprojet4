@@ -6,10 +6,13 @@ require_once("model/LogsManager.php");
 function check()
 {
     $logsManager = new LogsManager();
-    $logsManager->logsCheck();
-
+    /*$logsManager->logsCheck();*/
     $isValid = $logsManager->logsCheck();
-
+    if ($isValid -> fetch())
+        {
+            echo 'Pseudonyme et/ou email déjà utilisé. !<br />';
+            die();
+        }
 }
 
 
@@ -19,6 +22,8 @@ function register()
     $logsManager->addMember();
 
     $newMember = $logsManager->addMember();
+
+    require_once("view/connectView.php");
 
 }
 

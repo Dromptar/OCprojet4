@@ -17,20 +17,20 @@ class LogsManager extends Manager
         $db = $this->database;
         $req = $db->prepare('SELECT pseudo, email FROM members WHERE pseudo=? OR email=?');
         $req->execute(array($_POST['pseudo'], $_POST['email']));
-        $datas = $req->fetch();
-
+        
         return $req;
-        
-        
 
     }
 
 
     public function addMember() {
 
+       $pseudo = $_POST['pseudo'];
+       $email = $_POST['email']; 
        $pass_hache = password_hash($_POST['pass1'], PASSWORD_DEFAULT); 
        $db = $this->database;
-       $req = $db->prepare('INSERT INTO members(pseudo, pass, email, regist_date) VALUES(:pseudo, :pass, :email, CURDATE())');
+       $req = $db->prepare('INSERT INTO members(pseudo, pass, email, regist_date) 
+                            VALUES(:pseudo, :pass, :email, CURDATE())');
        $req->execute(array(
                            'pseudo' => $pseudo,
                            'pass' => $pass_hache,

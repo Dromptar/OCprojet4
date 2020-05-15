@@ -4,7 +4,7 @@
 
 <section id="connect">
 
-    <div id="formulaire">
+    <div id="connect_formulaire">
 
         <form action="" method="POST">
 
@@ -15,7 +15,7 @@
 
         </form>
 
-        <p><a href="index.php?url=register">Pas encore de compte ? Inscrivez-Vous !</a></p>
+        <p>Pas encore de compte ?<br/><a href="index.php?url=register">Inscrivez-Vous !</a></p>
 
     </div>
 

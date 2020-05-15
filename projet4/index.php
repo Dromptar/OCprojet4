@@ -17,24 +17,27 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         if(isset($_POST['inscription'])) {
             require_once("controller/logs.php");
 
-            if (isset($_POST['pseudo']) && htmlspecialchars($_POST['pseudo'])
+            if (isset($_POST['pseudo']) && !empty($_POST['pseudo']) && htmlspecialchars($_POST['pseudo'])
                 && !empty($_POST['pass1']) && !empty($_POST['pass2'])
                 && isset($_POST['email']) && htmlspecialchars($_POST['email'])) {
         
                 check();
-            }
+             
 
-                if (($_POST['pass1'] == $_POST['pass2']) 
+                if (($_POST['pass1'] == $_POST['pass2'])
                 && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email'])) {  
 
                     var_dump($_POST);
                     register();
+                    header('Location: http://localhost/projet4/index.php?url=mySpace');
                 
-                } 
-                else {
+                } else {
                     echo ' Les mots de passes ne correspondent pas et/ou l\'adresse mail n\'est pas valide.';
                 }
-           
+
+            } else {
+                echo' Veuillez remplir tous les champs';
+            }    
         } 
     }
 

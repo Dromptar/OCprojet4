@@ -4,14 +4,14 @@
 
 <section id="register">
 
-    <div id="formulaire">
+    <div id="register_formulaire">
 
         <form action="" method="POST">
 
-            <input type="text" name="pseudo" placeholder="Identifiant" required/>
-            <input type="password" name="pass1" placeholder="Mot de passe" required/>
-            <input type="password" name="pass2" placeholder="Retapez le mot de passe" required/>
-            <input type="text" name="email" placeholder="Email" required/>
+            <input type="text" name="pseudo" placeholder="Identifiant" />
+            <input type="password" name="pass1" placeholder="Mot de passe" />
+            <input type="password" name="pass2" placeholder="Retapez le mot de passe" />
+            <input type="text" name="email" placeholder="Email" />
             <!--<label>Connexion automatique <input type="checkbox"  name="connexion" checked> </label> !-->
             <input type="submit" name="inscription" value="Je m'inscris" />
 

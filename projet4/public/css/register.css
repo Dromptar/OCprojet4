@@ -7,18 +7,31 @@
     background-position: center; 
 }
 
-#formulaire
+#register_formulaire
 {
+    height: 200px;
+    width: 15%;
     position: relative;
-    top: 50%;
+    top: 22%;
+    left: 65%;
 }
 
 form
 {
-    height: 120px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 12%;
-    margin: 0 auto;
+    width: 100%;
+ 
+}
+
+form input
+{
+    height: 25px;
+    background-color: lightgray;;
+    border: 1px solid #536c82;
+    box-shadow: 2px 2px rgb(33, 30, 31);
+    text-align: center;
+    border-radius: 5px;
 }

@@ -62,6 +62,11 @@ footer li, a
     list-style-type: none;
 }
 
+a:visited
+{
+    color:rgb(33, 30, 31);
+}
+
 footer a:visited
 {
     color: rgb(237,233,215);

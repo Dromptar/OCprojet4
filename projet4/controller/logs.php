@@ -22,7 +22,7 @@ function register()
     
     $newMember = $logsManager->addMember();
 
-    require_once("view/connectView.php");
+    /*require_once("view/connectView.php");*/
 
 }
 

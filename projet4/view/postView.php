@@ -21,7 +21,7 @@
     </p>
 </div>
 
-<p><a href="index.php?url=blog">Retour à la liste des billets</a></p>
+<p id="posts_list"><a href="index.php?url=blog">Retour à la liste des billets</a></p>
 
 </section>
 

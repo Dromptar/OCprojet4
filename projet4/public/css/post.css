@@ -21,7 +21,7 @@ header#post-banner
 section#posts
 {
     margin: 0;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 5%;
     border-bottom: 2px solid black;
     /*background-image: linear-gradient(to top, rgb(228,131,58), rgb(241,153,52), rgb(244,164,96), rgb(246,191,153));*/
@@ -43,6 +43,22 @@ section#posts
 {
     text-align: end;
 }
+
+#posts_list
+{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(33, 30, 31);
+    text-align: center;
+}
+
+#posts_list a:visited
+{
+    text-decoration: none;
+    color: rgb(33, 30, 31);
+}
+
 
 section#comments
 {

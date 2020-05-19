@@ -38,7 +38,7 @@
             </div>
             <div>
                 <label for="comment">Commentaire</label><br />
-                <textarea id="comment" name="comment"></textarea>
+                <textarea id="mytextarea" name="comment"></textarea>
             </div>
             <div>
                 <input type="submit" name="validate" value="Commenter" />
@@ -65,7 +65,6 @@
     </aside>
 
 </section>
-
 
 <?php $content = ob_get_clean(); ?>
 

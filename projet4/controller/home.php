@@ -13,12 +13,16 @@ function listLastPosts()
     require_once("view/homeView.php");
 }
 
+function mySpace()
+{
+    require_once("view/connectView.php");
+}
 
-listLastPosts();
 
 
 
-require_once("view/homeView.php");
+
+
 
 
 

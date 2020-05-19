@@ -2,16 +2,24 @@
 
 require_once("model/LogsManager.php");
 
-function register()
+function registerForm() 
+{
+    require_once("view/registerView.php");
+}
+
+function adminSpace() {
+    
+    require_once("view/adminView.php");
+}
+
+function signUp()
 {
     $logsManager = new LogsManager();
     
     $newMember = $logsManager->addMember();
 
-    
-
+  
 }
-
 
 function check() {
 
@@ -33,7 +41,8 @@ function check() {
                 && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email'])) {  
 
                     
-                    register();
+                    signUp();
+                    
                     
                 
                 } else {

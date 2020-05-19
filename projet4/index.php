@@ -1,30 +1,33 @@
 <?php
 
+require_once("controller/home.php");
+require_once("controller/logs.php");
 
 if (isset($_GET['url']) && !empty($_GET['url']))
 {
-    if ($_GET['url']=="home"){
-    require_once("controller/home.php");
+    if ($_GET['url']=="home") {
+        listLastPosts();
     }
 
     elseif ($_GET['url']=="mySpace") {
-            require_once("view/connectView.php");
+        mySpace();
     }
 
     elseif ($_GET['url']=="register") {
-        require_once("view/registerView.php");
-    
-        if (isset($_POST['inscription'])) {
-            require_once("controller/logs.php");
-
-            check();
-        }
+        registerForm();
+    }
+            
+    elseif (isset($_POST['inscription'])) {
+            
+        check();
         
-        if ($_GET['url']=="admin") {
-            require_once("view/adminView.php");
+            if ($_GET['url']=="admin") {
+                
+            adminSpace();
         }
     }
-    
+ 
+  
 
     elseif ($_GET['url']=="blog") {
     
@@ -34,10 +37,10 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     
     elseif ($_GET['url']=="post") {
     
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
-            require_once("controller/blog.php");
-            post();
-            }
+        if (isset($_GET['id']) && $_GET['id'] > 0) {
+        require_once("controller/blog.php");
+        post();
+        }
     }
 
     elseif ($_GET['url']=='addComment') {

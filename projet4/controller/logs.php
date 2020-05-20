@@ -7,10 +7,7 @@ function registerForm()
     require_once("view/registerView.php");
 }
 
-function adminSpace() {
-    
-    require_once("view/adminView.php");
-}
+
 
 function signUp()
 {
@@ -18,11 +15,10 @@ function signUp()
     
     $newMember = $logsManager->addMember();
 
-  
 }
 
-function check() {
-
+function check() 
+{
     $logsManager = new LogsManager();
     
     $isValid = $logsManager->logsCheck();
@@ -39,12 +35,10 @@ function check() {
         
             if (($_POST['pass1'] == $_POST['pass2'])
                 && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email'])) {  
-
                     
                     signUp();
-                    
-                    
-                
+                    require_once("view/adminView.php");
+                             
                 } else {
                     echo ' Les mots de passes ne correspondent pas et/ou l\'adresse mail n\'est pas valide.';
                 }

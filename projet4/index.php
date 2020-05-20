@@ -2,6 +2,7 @@
 
 require_once("controller/home.php");
 require_once("controller/logs.php");
+require_once("controller/blog.php");
 
 if (isset($_GET['url']) && !empty($_GET['url']))
 {
@@ -14,31 +15,24 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     }
 
     elseif ($_GET['url']=="register") {
-        registerForm();
-    }
-            
-    elseif (isset($_POST['inscription'])) {
-            
-        check();
-        
-            if ($_GET['url']=="admin") {
-                
-            adminSpace();
-        }
-    }
- 
-  
 
+        if (isset($_POST['inscription'])) {
+            check();
+        } else {
+            registerForm();
+        }
+     
+    }
+            
+     
     elseif ($_GET['url']=="blog") {
-    
-    require_once("controller/blog.php");
-    listAllPosts();
+        listAllPosts();
     }
     
     elseif ($_GET['url']=="post") {
     
         if (isset($_GET['id']) && $_GET['id'] > 0) {
-        require_once("controller/blog.php");
+        
         post();
         }
     }
@@ -47,7 +41,7 @@ if (isset($_GET['url']) && !empty($_GET['url']))
             
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-                    require_once("controller/blog.php");
+                    
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
                 }
                 else {

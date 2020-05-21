@@ -1,6 +1,5 @@
 <?php
 
-
 /*namespace Simon\Projet4\Model;*/
 
 require_once("Manager.php");
@@ -42,14 +41,14 @@ class LogsManager extends Manager
 
     public function connectMember() {
 
+        $pseudo = $_POST['pseudo'];
         $db = $this->database;
-        $req = $bdd->prepare('SELECT id, pass FROM members WHERE pseudo = :pseudo');
+        $req = $db->prepare('SELECT id, pass FROM members WHERE pseudo = :pseudo');
         $req->execute(array(
                         'pseudo' => $pseudo));
-        $resultat = $req -> fetch();
 
-        // Comparaison du pass envoyé via le formulaire avec la base
-        $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
+        return $req;
+       
     }
 
 

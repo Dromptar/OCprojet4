@@ -3,13 +3,21 @@
 
 <?php ob_start(); ?>
 
-cswdvarjgvoreajgioejrgoiretjgiozaejgiowsgjirsjo
+
+
+
+      <textarea id="mytextarea">Hello, World!</textarea>
+
+
+
+
 
 
 <script src="public/js/textEditor.js"></script>
 
-
 <?php $content = ob_get_clean(); ?>
+
+
 
 <?php require('template.php'); ?>
 

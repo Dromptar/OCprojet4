@@ -3,15 +3,12 @@
 
 <?php ob_start(); ?>
 
+<section id="editon">
+
+<textarea id="texteditor">Hello, World!</textarea>
 
 
-
-      <textarea id="mytextarea">Hello, World!</textarea>
-
-
-
-
-
+</section>
 
 <script src="public/js/textEditor.js"></script>
 

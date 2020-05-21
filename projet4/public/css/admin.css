@@ -3,7 +3,7 @@ body
     background-image: linear-gradient(to top,rgb(105,105,105), rgb(167, 168, 172)); 
 }
 
-#mytextarea
+#texteditor
 {
     padding-top: 10%;
 }

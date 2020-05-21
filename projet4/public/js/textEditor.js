@@ -1,4 +1,4 @@
 
 tinymce.init({
-  selector: '#mytextarea'
+  selector: 'textarea#texteditor'
 });

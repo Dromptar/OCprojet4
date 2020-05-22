@@ -1,4 +1,17 @@
-<?php $title = 'Connexion'; ?>
+<?php 
+require_once("controller/logs.php");
+
+session_start();
+
+if (isset($_SESSION['id']) && !empty($_SESSION['id'])
+    && isset($_SESSION['pseudo']) && !empty($_SESSION['id']))
+{
+    require_once("adminView.php");
+}
+
+$title = 'Connexion';
+?>
+
 
 <?php ob_start(); ?>
 

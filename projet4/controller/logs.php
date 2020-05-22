@@ -8,7 +8,6 @@ function registerForm()
 }
 
 
-
 function signUp()
 {
     $logsManager = new LogsManager();
@@ -50,6 +49,7 @@ function registerCheck()
 } 
 
 
+
 function logIn(){
 
     $logsManager = new LogsManager();
@@ -66,18 +66,20 @@ function logIn(){
         else
         {
             if ($isPasswordCorrect) {
-                session_start();
-                $pseudo = ($_POST['pseudo']);
-                $_SESSION['id'] = $score['id'];
-                $_SESSION['pseudo'] = $pseudo;
-                echo 'Bienvenue à toi ' . $_POST['pseudo'] . ' !';
-                require_once("view/adminView.php");
+               
+            session_start();
+            $pseudo = ($_POST['pseudo']);
+            $_SESSION['id'] = $score['id'];
+            $_SESSION['pseudo'] = $pseudo;
+            $bonjour = 'Bienvenue à toi ' . $_POST['pseudo'] . ' !';
+            require_once("view/adminView.php");
         }
             else {
             echo 'Mauvais identifiant ou mot de passe !';
             }
         }
 }
+
 
 
 

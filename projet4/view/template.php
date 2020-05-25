@@ -25,7 +25,7 @@
             <ul id="nav-tabs">
                 <li><i class="fas fa-home"></i><a href="index.php?url=home">Home</a></li>
                 <li><a href="index.php?url=blog">Les chapitres</a></li>
-                <li><a href="index.php?url=mySpace">Mon espace</a></li>
+                <li><a href="index.php?url=connection">Mon espace</a></li>
             </ul>
 
             <ul id="nav-social">
@@ -44,7 +44,7 @@
                 <li>Plan du site</li>
                 <li><a href="index.php?url=home">Home</a></li>
                 <li><a href="index.php?url=blog">Les chapitres</a></li>
-                <li><a href="index.php?url=admin">Connexion</a></li>
+                <li><a href="index.php?url=connection">Connexion</a></li>
             </ul>
 
             <ul id="foot-social">

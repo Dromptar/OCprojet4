@@ -1,8 +1,8 @@
 <?php
-
 require_once("controller/home.php");
 require_once("controller/logs.php");
 require_once("controller/blog.php");
+
 
 if (isset($_GET['url']) && !empty($_GET['url']))
 {
@@ -10,14 +10,19 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         listLastPosts();
     }
 
-    elseif ($_GET['url']=="mySpace") {
+    elseif ($_GET['url']=="connection") {
         
         if (isset($_POST['connexion'])) {
-            logIn();
-        } else {
-            mySpace();
+
+            logIn();   
+        } else{
+            connection();
         }
 
+    }
+
+    elseif ($_GET['url']=="logout") {
+        logout();
     }
 
     elseif ($_GET['url']=="register") {

@@ -13,7 +13,7 @@ function listLastPosts()
     require_once("view/homeView.php");
 }
 
-function mySpace()
+function connection()
 {
     require_once("view/connectView.php");
 }

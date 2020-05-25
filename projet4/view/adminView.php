@@ -1,11 +1,23 @@
+<?php 
 
-<?php $title = 'Espace Admin'; ?>
+if(!isset($_SESSION)){
+
+    session_start();
+}
+
+
+ $title = 'Espace Admin'; ?>
+
+
 
 <?php ob_start(); ?>
 
-<p><?= $bonjour ?></p>
+<p id="session"><?= $_SESSION['connected']?></p>
 
-<section id="editon">
+<p><a href="index.php?url=logout">Déconnexion</a></p>
+
+
+<section id="edition">
 
 <textarea id="texteditor">Hello, World!</textarea>
 

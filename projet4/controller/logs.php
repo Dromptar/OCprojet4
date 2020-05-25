@@ -7,12 +7,18 @@ function registerForm()
     require_once("view/registerView.php");
 }
 
+function myAdminSpace() {
+
+    require_once("view/adminView.php");
+}
 
 function signUp()
 {
     $logsManager = new LogsManager();
     
     $newMember = $logsManager->addMember();
+
+    myAdminSpace();
 
 }
 
@@ -36,8 +42,6 @@ function registerCheck()
                 && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email'])) {  
                     
                     signUp();
-                    echo 'Vous êtes connecté !';
-                    require_once("view/adminView.php");
                              
                 } else {
                     echo ' Les mots de passes ne correspondent pas et/ou l\'adresse mail n\'est pas valide.';
@@ -71,13 +75,29 @@ function logIn(){
             $pseudo = ($_POST['pseudo']);
             $_SESSION['id'] = $score['id'];
             $_SESSION['pseudo'] = $pseudo;
-            $bonjour = 'Bienvenue à toi ' . $_POST['pseudo'] . ' !';
+            $_SESSION['connected'] = $_POST['pseudo'] ;
             require_once("view/adminView.php");
         }
             else {
             echo 'Mauvais identifiant ou mot de passe !';
             }
         }
+}
+
+function logOut() {
+
+   
+
+    // Suppression des variables de session et de la session
+    $_SESSION = array();
+    session_destroy();
+    require_once("view/connectView.php");
+
+
+    // Suppression des cookies de connexion automatique
+   /* setcookie('login', '');
+    setcookie('pass_hache', '');*/
+
 }
 
 

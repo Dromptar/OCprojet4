@@ -71,3 +71,14 @@ footer a:visited
 {
     color: rgb(237,233,215);
 }
+
+
+#session
+{
+    z-index: 11;
+    position: fixed;
+    color: white;
+    top: 1%;
+    right: 1%;
+    font-style: italic;
+}

@@ -63,15 +63,8 @@ function logIn(){
     $score = $resultat->fetch();
     $isPasswordCorrect = password_verify($_POST['pass'], $score['pass']);
     
-    if (!$resultat)
-        {
-        echo 'Mauvais identifiant ou mot de passe !';
-        }
-        else
-        {
-            if ($isPasswordCorrect) {
+    if ($isPasswordCorrect) {
                
-            session_start();
             $pseudo = ($_POST['pseudo']);
             $_SESSION['id'] = $score['id'];
             $_SESSION['pseudo'] = $pseudo;
@@ -81,8 +74,8 @@ function logIn(){
             else {
             echo 'Mauvais identifiant ou mot de passe !';
             }
-        }
 }
+
 
 function logOut() {
 
@@ -91,7 +84,7 @@ function logOut() {
     // Suppression des variables de session et de la session
     $_SESSION = array();
     session_destroy();
-    require_once("view/connectView.php");
+    header('Location: http://localhost/projet4/index.php?url=connection');
 
 
     // Suppression des cookies de connexion automatique

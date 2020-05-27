@@ -14,16 +14,16 @@ function listAllPosts()
     require_once("view/blogView.php");
 }
 
-function postCheck() 
+function displayPostCheck() 
 {
     if (isset($_GET['id']) && $_GET['id'] > 0) { 
          
-        post(); 
+        displayPost(); 
     } 
 
 }
 
-function post()
+function displayPost()
 {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
@@ -34,7 +34,33 @@ function post()
     require('view/postView.php');
 }
 
-function commentCheck() {
+
+function postCheck()
+{
+    if (isset($_GET['id']) && $_GET['id'] > 0) {
+
+        if (isset($_POST['author']) && !empty($_POST['author']) && htmlspecialchars($_POST['author'])
+        && isset($_POST['title']) && !empty($_POST['title']) && htmlspecialchars($_POST['title'])
+        && isset($_POST['quote']) && !empty($_POST['quote']) && htmlspecialchars($_POST['quote'])
+        && isset($_POST['content']) && !empty($_POST['content']) && htmlspecialchars($_POST['content'])) {
+            
+           post($_GET['id'], $_POST['author'], $_POST['title'], $_POST['quote'], $_POST['content']);
+    
+        }
+    }
+}
+
+function post($id, $author, $title, $quote, $content) 
+{
+    $postManager = new PostManager();
+    
+    $newPost = $postManager->newPost($id, $author, $title, $quote, $content);
+
+    
+}
+
+function commentCheck() 
+{
 
     if (isset($_GET['id']) && $_GET['id'] > 0) {
         if (!empty($_POST['author']) && !empty($_POST['comment'])) {

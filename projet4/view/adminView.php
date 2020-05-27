@@ -12,14 +12,29 @@ if(!isset($_SESSION)){
 
 <?php ob_start(); ?>
 
-<p id="session"><?= $_SESSION['connected']?></p>
+<p id="session"><?= $_SESSION['connected']?><br/>
+<a href="index.php?url=logout">Déconnexion</a></p>
 
-<p><a href="index.php?url=logout">Déconnexion</a></p>
+
 
 
 <section id="edition">
 
-<textarea id="texteditor">Hello, World!</textarea>
+    <form action="" method="post">
+            <div>
+                <input type="text" id="author" name="author" placeholder="Auteur"/>
+                <input type="text" id="title" name="title" placeholder="Titre"/>
+                <input type="text" id="quote" name="quote" placeholder="Citation"/>
+            </div>
+            <div>
+                <textarea id="texteditor" name="texteditor">Hello, World!</textarea>
+            </div>
+            <div>
+                <input type="submit" name="publish" value="Publier" />
+            </div>
+    </form>
+
+
 
 
 </section>

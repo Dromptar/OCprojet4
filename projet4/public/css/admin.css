@@ -5,6 +5,13 @@ body
 
 section#edition
 {
-    padding-top: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#texteditor
+{
+    width: 70%;
+    height: 400px;
 }
 

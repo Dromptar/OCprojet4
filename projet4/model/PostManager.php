@@ -11,6 +11,29 @@ class PostManager extends Manager
         parent::__construct();
     }
 
+
+    public function newPost($id, $author, $title, $quote, $content)
+    {
+        $author = $_POST['author'];
+        $title = $_POST['title'];
+        $quote = $_POST['quote'];
+        $content = $_POST['texteditor'];
+        
+        $db = $this->database;
+        $req = $db->prepare('INSERT INTO posts(id, author, title, quote, content, date_post) 
+                                VALUES(:author, :title, :quote, :content, CURDATE())');
+        $req->execute(array(
+                        'author' => $author,
+                        'title' => $title,
+                        'quote' => $quote,
+                        'content' => $content
+                          ));
+
+   
+       return $req;
+       
+    }
+
     public function getLastPosts(){
 
                 

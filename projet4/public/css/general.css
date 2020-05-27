@@ -44,6 +44,7 @@ footer
 {
     color: rgb(237,233,215);
     height: 150px;
+    bottom: 0;
     background-color: rgb(33,30,31);
     display: flex;
     justify-content: space-around;

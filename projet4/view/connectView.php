@@ -1,10 +1,10 @@
 <?php 
 
-session_start();
-if (isset($_SESSION['connected'])) {
-   require_once("adminView.php");
-   exit();
+if(!isset($_SESSION)){
+
+    session_start();
 }
+
 
 $title = 'Connexion'; ?>
 

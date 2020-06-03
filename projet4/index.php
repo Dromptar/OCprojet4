@@ -18,25 +18,24 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     }
 
     elseif ($_GET['url']=="connection") {
-           
+        
         if (isset($_SESSION['connected'])) {
             myAdminSpace();
+            if (isset($_POST['publish'])) {
+                
+                postCheck();  
+            }  
+            
         }
         
         elseif (isset($_POST['connexion'])) {
             logIn();
-               
+                      
         } else{
             connection();
         }
 
     }
-    
-    elseif (isset($_POST['publish'])) {
-            
-        postCheck();  
-    }
-
 
     elseif ($_GET['url']=="logout") {
         logout();

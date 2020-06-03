@@ -37,25 +37,26 @@ function displayPost()
 
 function postCheck()
 {
-    if (isset($_GET['id']) && $_GET['id'] > 0) {
-
-        if (isset($_POST['author']) && !empty($_POST['author']) && htmlspecialchars($_POST['author'])
-        && isset($_POST['title']) && !empty($_POST['title']) && htmlspecialchars($_POST['title'])
-        && isset($_POST['quote']) && !empty($_POST['quote']) && htmlspecialchars($_POST['quote'])
-        && isset($_POST['content']) && !empty($_POST['content']) && htmlspecialchars($_POST['content'])) {
-            
-           post($_GET['id'], $_POST['author'], $_POST['title'], $_POST['quote'], $_POST['content']);
     
-        }
+    if (isset($_POST['author']) && !empty($_POST['author']) && htmlspecialchars($_POST['author'])
+    && isset($_POST['title']) && !empty($_POST['title']) && htmlspecialchars($_POST['title'])
+    && isset($_POST['quote']) && !empty($_POST['quote']) && htmlspecialchars($_POST['quote'])
+    && isset($_POST['content']) && !empty($_POST['content']) && htmlspecialchars($_POST['content'])) {
+        
+        var_dump($_POST);
+        post();
+        
+    
     }
+    
 }
 
-function post($id, $author, $title, $quote, $content) 
+function post() 
 {
     $postManager = new PostManager();
+    $postManager->newPost();
     
-    $newPost = $postManager->newPost($id, $author, $title, $quote, $content);
-
+    $newPost = $postManager -> newPost();
     
 }
 

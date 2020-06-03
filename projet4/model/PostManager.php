@@ -12,7 +12,7 @@ class PostManager extends Manager
     }
 
 
-    public function newPost($id, $author, $title, $quote, $content)
+    public function newPost(/*$id, $author, $title, $quote, $content*/)
     {
         $author = $_POST['author'];
         $title = $_POST['title'];
@@ -20,7 +20,7 @@ class PostManager extends Manager
         $content = $_POST['texteditor'];
         
         $db = $this->database;
-        $req = $db->prepare('INSERT INTO posts(id, author, title, quote, content, date_post) 
+        $req = $db->prepare('INSERT INTO posts(author, title, quote, content, date_post) 
                                 VALUES(:author, :title, :quote, :content, CURDATE())');
         $req->execute(array(
                         'author' => $author,
@@ -28,7 +28,6 @@ class PostManager extends Manager
                         'quote' => $quote,
                         'content' => $content
                           ));
-
    
        return $req;
        

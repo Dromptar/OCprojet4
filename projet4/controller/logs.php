@@ -10,6 +10,7 @@ function registerForm()
 function myAdminSpace() {
 
     require_once("view/adminView.php");
+
 }
 
 function signUp()

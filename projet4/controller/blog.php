@@ -38,15 +38,14 @@ function displayPost()
 function postCheck()
 {
     
-    if (isset($_POST['author']) && !empty($_POST['author']) && htmlspecialchars($_POST['author'])
-    && isset($_POST['title']) && !empty($_POST['title']) && htmlspecialchars($_POST['title'])
-    && isset($_POST['quote']) && !empty($_POST['quote']) && htmlspecialchars($_POST['quote'])
-    && isset($_POST['content']) && !empty($_POST['content']) && htmlspecialchars($_POST['content'])) {
-        
-        var_dump($_POST);
+    if (isset($_POST['author']) && !empty($_POST['author']) 
+    && isset($_POST['title']) && !empty($_POST['title']) 
+    && isset($_POST['quote']) && !empty($_POST['quote']) 
+    && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
+                
         post();
+        $_POST='';
         
-    
     }
     
 }
@@ -56,7 +55,8 @@ function post()
     $postManager = new PostManager();
     $postManager->newPost();
     
-    $newPost = $postManager -> newPost();
+    $newPost = $postManager -> newPost(); 
+
     
 }
 

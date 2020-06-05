@@ -21,11 +21,7 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         
         if (isset($_SESSION['connected'])) {
             myAdminSpace();
-            if (isset($_POST['publish'])) {
-                
-                postCheck();  
-            }  
-            
+         
         }
         
         elseif (isset($_POST['connexion'])) {
@@ -53,6 +49,8 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     
             
     elseif ($_GET['url']=="blog") {
+        /*var_dump($_POST);*/
+        postCheck();
         listAllPosts();
     }
     

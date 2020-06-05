@@ -20,7 +20,7 @@ if(!isset($_SESSION)){
 
 <section id="edition">
 
-    <form action="" method="post">
+    <form action="http://localhost/projet4/index.php?url=blog" method="post">
             <div>
                 <input type="text" id="author" name="author" placeholder="Auteur"/>
                 <input type="text" id="title" name="title" placeholder="Titre"/>

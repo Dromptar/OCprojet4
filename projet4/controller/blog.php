@@ -6,8 +6,7 @@ require_once("model/CommentManager.php");
 function listAllPosts()
 {
     $postManager = new PostManager();
-    $postManager->getAllPosts();
-
+    
     $allPosts = $postManager->getAllPosts();
 
  
@@ -60,6 +59,7 @@ function deleteCheck()
 {
     if (isset($_POST['id']) && $_POST['id'] > 0) {
         deletePost();
+        
     }
 }
 
@@ -68,7 +68,8 @@ function deletePost()
     $postManager = new PostManager();
         
     $deletePost = $postManager -> deletePost();
-    
+   
+   
 }
 
 

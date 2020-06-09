@@ -22,6 +22,7 @@
             {
             ?>
             <form action="http://localhost/projet4/index.php?url=blog" method="POST">
+              <input type="hidden" name="id" value="<?= $data['id'] ?>">
               <input type="submit" name="delete" value="Supprimer" />
               <input type="submit" name="modify" value="Modifier" />
             </form>

@@ -35,8 +35,14 @@ class PostManager extends Manager
 
     public function deletePost()
     {
+        $id = $_POST['id'];
         $db = $this->database;
-        $req = $db->prepare(' DELETE FROM posts WHERE id= ? ');
+        $req = $db->prepare('DELETE FROM posts WHERE id= :id');
+        $req->execute(array(
+                    'id' => $id
+                    ));
+        var_dump($_POST);
+        return $req;
         
     }
 

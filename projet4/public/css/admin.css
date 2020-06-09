@@ -9,9 +9,13 @@ section#edition
     margin-bottom: 10%;
 }
 
-#texteditor
+section#edition form
 {
-    width: 70%;
-    height: 400px;
+    width: 80%;
+    margin: auto;
 }
 
+#texteditor
+{
+    height: 400px;
+}

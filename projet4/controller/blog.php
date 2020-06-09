@@ -44,8 +44,7 @@ function postCheck()
     && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
                 
         post();
-        $_POST='';
-        
+                
     }
     
 }
@@ -53,12 +52,25 @@ function postCheck()
 function post() 
 {
     $postManager = new PostManager();
-    $postManager->newPost();
-    
+        
     $newPost = $postManager -> newPost(); 
+}
 
+function deleteCheck()
+{
+    if (isset($_POST['id']) && $_POST['id'] > 0) {
+        deletePost();
+    }
+}
+
+function deletePost()
+{
+    $postManager = new PostManager();
+        
+    $deletePost = $postManager -> deletePost();
     
 }
+
 
 function commentCheck() 
 {

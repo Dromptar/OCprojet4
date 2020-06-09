@@ -51,7 +51,10 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     elseif ($_GET['url']=="blog") {
         /*var_dump($_POST);*/
         postCheck();
+        deleteCheck();
         listAllPosts();
+
+        
     }
     
     elseif ($_GET['url']=="post") {

@@ -12,7 +12,7 @@ class PostManager extends Manager
     }
 
 
-    public function newPost(/*$id, $author, $title, $quote, $content*/)
+    public function newPost()
     {
         $author = $_POST['author'];
         $title = $_POST['title'];
@@ -33,6 +33,13 @@ class PostManager extends Manager
        
     }
 
+    public function deletePost()
+    {
+        $db = $this->database;
+        $req = $db->prepare(' DELETE FROM posts WHERE id= ? ');
+        
+    }
+
     public function getLastPosts(){
 
                 
@@ -40,7 +47,7 @@ class PostManager extends Manager
         $req = $db->query('SELECT id, author, title, quote, content, DATE_FORMAT(date_post, \'%d/%m/%Y\')
          AS date_post_fr FROM posts ORDER BY date_post DESC LIMIT 0, 3');
 
-        return $req;/*->fetchAll();*/
+        return $req;
     
     }
 

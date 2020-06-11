@@ -43,6 +43,10 @@ section#posts
     font-size: 1.2em;
 }
 
+.post form
+{
+    
+}
 .read-button
 {
     width: 130px;
@@ -68,3 +72,4 @@ section#posts
 {
     color: rgb(237,233,215)
 }
+

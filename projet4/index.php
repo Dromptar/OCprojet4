@@ -50,13 +50,15 @@ if (isset($_GET['url']) && !empty($_GET['url']))
             
     elseif ($_GET['url']=="blog") {
         
+        if (isset($_POST['delete'])) {
+            deleteCheck();     
+        }
+        else if (isset($_POST['modify'])){
+            updateView();
+        }
+
         postCheck();
         listAllPosts();
-
-        if (isset($_POST['delete'])) {
-            deleteCheck();
-              
-        }
     }
     
     elseif ($_GET['url']=="post") {

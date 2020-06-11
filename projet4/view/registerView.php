@@ -6,7 +6,7 @@
 
     <div id="register_formulaire">
 
-        <form action="" method="POST">
+        <form class="logs" action="" method="POST">
 
             <input type="text" name="pseudo" placeholder="Identifiant" />
             <input type="password" name="pass1" placeholder="Mot de passe" />

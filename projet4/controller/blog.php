@@ -5,11 +5,9 @@ require_once("model/CommentManager.php");
 
 function listAllPosts()
 {
-    $postManager = new PostManager();
-    
+    $postManager = new PostManager();    
     $allPosts = $postManager->getAllPosts();
 
- 
     require_once("view/blogView.php");
 }
 
@@ -50,25 +48,40 @@ function postCheck()
 
 function post() 
 {
-    $postManager = new PostManager();
-        
+    $postManager = new PostManager();        
     $newPost = $postManager -> newPost(); 
 }
 
 function deleteCheck()
 {
     if (isset($_POST['id']) && $_POST['id'] > 0) {
-        deletePost();
-        
+        deletePost();  
     }
 }
 
 function deletePost()
 {
-    $postManager = new PostManager();
-        
+    $postManager = new PostManager();        
     $deletePost = $postManager -> deletePost();
    
+}
+
+function updateView()
+{
+    require('view/adminPostView.php');
+}
+
+function updateCheck()
+{
+    if (isset($_POST['id']) && $_POST['id'] > 0) {
+        updatePost();  
+    }
+}
+
+function updatePost()
+{
+    $postManager = new PostManager();        
+    $updatePost = $postManager -> updatePost();
    
 }
 
@@ -93,7 +106,6 @@ function commentCheck()
 function addComment($postId, $author, $comment)
 {
     $commentManager = new CommentManager();
-
     $affectedLines = $commentManager -> postComment($postId, $author, $comment);
 
     if ($affectedLines === false) {

@@ -16,7 +16,7 @@
     left: 65%;
 }
 
-form
+.logs
 {
     height: 100%;
     display: flex;
@@ -26,7 +26,7 @@ form
  
 }
 
-form input
+.logs input
 {
     height: 25px;
     background-color: lightgray;;

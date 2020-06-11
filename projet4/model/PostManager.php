@@ -46,6 +46,27 @@ class PostManager extends Manager
         
     }
 
+    public function updatePost()
+    {
+        $author = $_POST['author'];
+        $title = $_POST['title'];
+        $quote = $_POST['quote'];
+        $content = $_POST['texteditor'];
+        $id = $_POST['id'];
+
+        $db = $this->database;
+        $req = $db->prepare('UPDATE posts SET author=?, title=?, quote=?, content=? WHERE id= :id');
+        $req->execute(array(
+                    'id' => $id,
+                    'author' => $author,
+                    'title' => $title,
+                    'quote' => $quote,
+                    'content' => $content
+                    ));
+        var_dump($_POST);
+        return $req;
+    }
+
     public function getLastPosts(){
 
                 

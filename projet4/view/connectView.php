@@ -14,7 +14,7 @@ $title = 'Connexion'; ?>
 
     <div id="connect_formulaire">
 
-        <form action="" method="POST">
+        <form class="logs" action="" method="POST">
 
             <input type="text" name="pseudo" placeholder="Identifiant" required/>
             <input type="password" name="pass" placeholder="Mot de Passe" required/>

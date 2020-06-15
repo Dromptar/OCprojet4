@@ -35,11 +35,10 @@ class PostManager extends Manager
 
     public function deletePost()
     {
-        $id = $_POST['id'];
         $db = $this->database;
         $req = $db->prepare('DELETE FROM posts WHERE id= :id');
         $req->execute(array(
-                    'id' => $id
+                    'id' => $_GET['delete']
                     ));
         var_dump($_POST);
         return $req;
@@ -48,34 +47,27 @@ class PostManager extends Manager
 
     public function updatePost()
     {
-        $author = $_POST['author'];
-        $title = $_POST['title'];
-        $quote = $_POST['quote'];
-        $content = $_POST['texteditor'];
-        $id = $_POST['id'];
-
         $db = $this->database;
-        $req = $db->prepare('UPDATE posts SET author=?, title=?, quote=?, content=? WHERE id= :id');
+        $req = $db->prepare('UPDATE posts SET author=:author, title=:title, quote=:quote, content=:content
+                             WHERE id= :id');
         $req->execute(array(
-                    'id' => $id,
-                    'author' => $author,
-                    'title' => $title,
-                    'quote' => $quote,
-                    'content' => $content
+                    'id' => $_POST['id'],
+                    'author' => $_POST['author'],
+                    'title' => $_POST['title'],
+                    'quote' => $_POST['quote'],
+                    'content' => $_POST['texteditor']
                     ));
-        var_dump($_POST);
+        
         return $req;
     }
 
-    public function getLastPosts(){
-
-                
+    public function getLastPosts()
+    {                
         $db = $this->database;
         $req = $db->query('SELECT id, author, title, quote, content, DATE_FORMAT(date_post, \'%d/%m/%Y\')
-         AS date_post_fr FROM posts ORDER BY date_post DESC LIMIT 0, 3');
+                            AS date_post_fr FROM posts ORDER BY date_post DESC LIMIT 0, 3');
 
         return $req;
-    
     }
 
     public function getAllPosts(){
@@ -92,9 +84,8 @@ class PostManager extends Manager
 
     }
 
-    public function getPost($postId) {
-
-
+    public function getPost($postId)
+    {
         $db = $this->database;
         $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(date_post, \'%d/%m/%Y \')
          AS date_post_fr FROM posts WHERE id = ?');

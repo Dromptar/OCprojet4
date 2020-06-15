@@ -20,8 +20,7 @@ if (isset($_GET['url']) && !empty($_GET['url']))
     elseif ($_GET['url']=="connection") {
         
         if (isset($_SESSION['connected'])) {
-            myAdminSpace();
-         
+            myAdminSpace();         
         }
         
         elseif (isset($_POST['connexion'])) {
@@ -50,15 +49,19 @@ if (isset($_GET['url']) && !empty($_GET['url']))
             
     elseif ($_GET['url']=="blog") {
         
-        if (isset($_POST['delete'])) {
+        if (isset($_GET['delete'])) {
+            $_GET['delete'] = 0 + $_GET['delete'];
             deleteCheck();     
         }
-        else if (isset($_POST['modify'])){
+        else if (isset($_GET['modify'])){
+            $_GET['modify'] = 0 + $_GET['modify'];
+            /*var_dump($_GET);*/
             updateView();
         }
 
         postCheck();
         listAllPosts();
+        
     }
     
     elseif ($_GET['url']=="post") {

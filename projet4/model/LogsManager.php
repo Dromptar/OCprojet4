@@ -38,6 +38,7 @@ class LogsManager extends Manager
        return $req;
        
     }
+    
 
     public function connectMember() {
 

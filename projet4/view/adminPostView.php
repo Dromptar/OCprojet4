@@ -23,11 +23,11 @@ if(!isset($_SESSION)){
     <form action="http://localhost/projet4/index.php?url=blog" method="post">
             <div>
                 <input type="text" id="author" name="author" placeholder="Auteur"/>
-                <input type="text" id="title" name="title" placeholder="Titre"/>
+                <input type="text" id="title" name="title" placeholder=<?= htmlspecialchars($post['title']) ?>/>
                 <input type="text" id="quote" name="quote" placeholder="Citation"/>
             </div>
             <div>
-                <textarea id="texteditor" name="texteditor"><?= nl2br($post['content']) ?></textarea>
+                <textarea id="texteditor" name="texteditor" placeholder=<?= nl2br($post['content']) ?>></textarea>
             </div>
             <div>
                 <input type="submit" name="publish" value="Publier" />

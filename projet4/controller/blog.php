@@ -14,7 +14,6 @@ function listAllPosts()
 function displayPostCheck() 
 {
     if (isset($_GET['id']) && $_GET['id'] > 0) { 
-         
         displayPost(); 
     } 
 
@@ -38,10 +37,8 @@ function postCheck()
     if (isset($_POST['author']) && !empty($_POST['author']) 
     && isset($_POST['title']) && !empty($_POST['title']) 
     && isset($_POST['quote']) && !empty($_POST['quote']) 
-    && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
-                
-        post();
-                
+    && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {       
+        post();         
     }
     
 }
@@ -54,7 +51,7 @@ function post()
 
 function deleteCheck()
 {
-    if (isset($_POST['id']) && $_POST['id'] > 0) {
+    if (isset($_GET['delete']) && $_GET['delete'] > 0) {
         deletePost();  
     }
 }
@@ -68,12 +65,13 @@ function deletePost()
 
 function updateView()
 {
-    require('view/adminPostView.php');
+    require_once('view/adminPostView.php');
+    
 }
 
 function updateCheck()
 {
-    if (isset($_POST['id']) && $_POST['id'] > 0) {
+    if (isset($_GET['id']) && $_GET['id'] > 0) {
         updatePost();  
     }
 }
@@ -81,8 +79,7 @@ function updateCheck()
 function updatePost()
 {
     $postManager = new PostManager();        
-    $updatePost = $postManager -> updatePost();
-   
+    $updatePost = $postManager -> updatePost(); 
 }
 
 
@@ -91,7 +88,6 @@ function commentCheck()
 
     if (isset($_GET['id']) && $_GET['id'] > 0) {
         if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-            
             addComment($_GET['id'], $_POST['author'], $_POST['comment']);
         }
         else {

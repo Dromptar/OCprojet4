@@ -21,11 +21,8 @@
       <?php if (isset($_SESSION['connected']))
             {
             ?>
-            <form action="http://localhost/projet4/index.php?url=blog" method="POST">
-              <input type="hidden" name="id" value="<?= $data['id'] ?>">
-              <input type="submit" name="delete" value="Supprimer" />
-              <input type="submit" name="modify" value="Modifier" />
-            </form>
+              <a href ="http://localhost/projet4/index.php?url=blog&delete=<?= $data['id'] ?>">Supprimer</a>
+              <a href ="http://localhost/projet4/index.php?url=blog&modify=<?= $data['id'] ?>">Modifier</a>
             <?php
             }
       ?>

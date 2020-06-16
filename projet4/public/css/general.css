@@ -79,7 +79,7 @@ footer a:visited
     z-index: 11;
     position: fixed;
     color: white;
-    top: 1%;
+    top: 0;
     right: 1%;
     font-style: italic;
 }

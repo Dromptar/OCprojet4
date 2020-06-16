@@ -51,17 +51,23 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         
         if (isset($_GET['delete'])) {
             $_GET['delete'] = 0 + $_GET['delete'];
-            deleteCheck();     
+            deleteCheck();
+            listAllPosts();     
         }
-        else if (isset($_GET['modify'])){
-            $_GET['modify'] = 0 + $_GET['modify'];
+        else if (isset($_GET['id'])){
+            $_GET['id'] = 0 + $_GET['id'];
             /*var_dump($_GET);*/
             updateView();
-        }
 
-        postCheck();
-        listAllPosts();
-        
+            if (isset($_POST['update'])){
+                updateCheck();
+            }
+        }
+        else {
+            postCheck();
+            listAllPosts();
+        }
+         
     }
     
     elseif ($_GET['url']=="post") {

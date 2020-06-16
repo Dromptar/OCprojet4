@@ -19,3 +19,22 @@ section#edition form
 {
     height: 400px;
 }
+
+#editor_inputs
+{
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-around; 
+}
+
+#editor_inputs input
+{
+    width: 100%;
+
+    margin-bottom: 5px;
+}
+
+p#session :visited
+{
+    color: white;
+}

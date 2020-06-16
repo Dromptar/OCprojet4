@@ -22,7 +22,7 @@
             {
             ?>
               <a href ="http://localhost/projet4/index.php?url=blog&delete=<?= $data['id'] ?>">Supprimer</a>
-              <a href ="http://localhost/projet4/index.php?url=blog&modify=<?= $data['id'] ?>">Modifier</a>
+              <a href ="http://localhost/projet4/index.php?url=blog&id=<?= $data['id'] ?>">Modifier</a>
             <?php
             }
       ?>

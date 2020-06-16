@@ -21,13 +21,13 @@ if(!isset($_SESSION)){
 <section id="edition">
 
     <form action="http://localhost/projet4/index.php?url=blog" method="post">
-            <div>
+            <div id="editor_inputs">
                 <input type="text" id="author" name="author" placeholder="Auteur"/>
                 <input type="text" id="title" name="title" placeholder="Titre"/>
                 <input type="text" id="quote" name="quote" placeholder="Citation"/>
             </div>
             <div>
-                <textarea id="texteditor" name="texteditor">Hello, World!</textarea>
+                <textarea id="texteditor" name="texteditor">Bonjour Jean !</textarea>
             </div>
             <div>
                 <input type="submit" name="publish" value="Publier" />

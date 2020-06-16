@@ -19,6 +19,7 @@ function displayPostCheck()
 
 }
 
+
 function displayPost()
 {
     $postManager = new PostManager();
@@ -65,13 +66,20 @@ function deletePost()
 
 function updateView()
 {
+    $postManager = new PostManager();
+    $post = $postManager -> getPost($_GET['id']);
+    
     require_once('view/adminPostView.php');
     
 }
 
 function updateCheck()
 {
-    if (isset($_GET['id']) && $_GET['id'] > 0) {
+    if (isset($_POST['update']) && $_POST['update'] > 0
+    && isset($_POST['author']) && !empty($_POST['author']) 
+    && isset($_POST['title']) && !empty($_POST['title']) 
+    && isset($_POST['quote']) && !empty($_POST['quote']) 
+    && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
         updatePost();  
     }
 }

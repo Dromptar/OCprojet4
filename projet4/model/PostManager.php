@@ -51,13 +51,13 @@ class PostManager extends Manager
         $req = $db->prepare('UPDATE posts SET author=:author, title=:title, quote=:quote, content=:content
                              WHERE id= :id');
         $req->execute(array(
-                    'id' => $_POST['id'],
                     'author' => $_POST['author'],
                     'title' => $_POST['title'],
                     'quote' => $_POST['quote'],
-                    'content' => $_POST['texteditor']
+                    'content' => $_POST['texteditor'],
+                    'id' => $_POST['update']
                     ));
-        
+                    
         return $req;
     }
 
@@ -87,11 +87,11 @@ class PostManager extends Manager
     public function getPost($postId)
     {
         $db = $this->database;
-        $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(date_post, \'%d/%m/%Y \')
+        $req = $db->prepare('SELECT id, author, title, quote, content, DATE_FORMAT(date_post, \'%d/%m/%Y \')
          AS date_post_fr FROM posts WHERE id = ?');
         $req->execute(array($postId));
         $post = $req->fetch();
-    
+        
         return $post;
     }
 

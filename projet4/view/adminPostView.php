@@ -30,7 +30,7 @@ if(!isset($_SESSION)){
                 <textarea id="texteditor" name="texteditor" value=<?= nl2br($post['content']) ?>></textarea>
             </div>
             <div>
-                <input type="submit" name="update" value="Actualiser" />
+            <a href ="http://localhost/projet4/index.php?url=blog&id&update">Actualiser</a>
             </div>
     </form>
 

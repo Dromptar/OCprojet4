@@ -49,19 +49,16 @@ if (isset($_GET['url']) && !empty($_GET['url']))
             
     elseif ($_GET['url']=="blog") {
         
-        if (isset($_GET['delete'])) {
-            $_GET['delete'] = 0 + $_GET['delete'];
+        if (isset($_GET['delete'])){
             deleteCheck();
             listAllPosts();     
         }
         else if (isset($_GET['id'])){
-            $_GET['id'] = 0 + $_GET['id'];
             /*var_dump($_GET);*/
             updateView();
-
-            if (isset($_POST['update'])){
-                updateCheck();
-            }
+        }
+        else if (isset($_GET['update'])){
+            updateCheck();
         }
         else {
             postCheck();

@@ -75,12 +75,13 @@ function updateView()
 
 function updateCheck()
 {
-    if (isset($_POST['update']) && $_POST['update'] > 0
-    && isset($_POST['author']) && !empty($_POST['author']) 
+    if (isset($_POST['author']) && !empty($_POST['author']) 
     && isset($_POST['title']) && !empty($_POST['title']) 
     && isset($_POST['quote']) && !empty($_POST['quote']) 
     && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
-        updatePost();  
+        var_dump($_POST);
+        echo 'joel mon maitre';
+        updatePost(); 
     }
 }
 

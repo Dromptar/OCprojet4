@@ -40,7 +40,7 @@ class PostManager extends Manager
         $req->execute(array(
                     'id' => $_GET['delete']
                     ));
-        var_dump($_POST);
+        
         return $req;
         
     }

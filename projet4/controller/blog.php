@@ -68,18 +68,20 @@ function updateView()
 {
     $postManager = new PostManager();
     $post = $postManager -> getPost($_GET['id']);
-    
+        
     require_once('view/adminPostView.php');
     
 }
 
 function updateCheck()
 {
+    var_dump($_GET);
+        
     if (isset($_POST['author']) && !empty($_POST['author']) 
     && isset($_POST['title']) && !empty($_POST['title']) 
     && isset($_POST['quote']) && !empty($_POST['quote']) 
     && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
-        var_dump($_POST);
+    
         echo 'joel mon maitre';
         updatePost(); 
     }

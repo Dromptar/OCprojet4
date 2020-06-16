@@ -55,7 +55,7 @@ class PostManager extends Manager
                     'title' => $_POST['title'],
                     'quote' => $_POST['quote'],
                     'content' => $_POST['texteditor'],
-                    'id' => $_POST['update']
+                    'id' => $_GET['update']
                     ));
                     
         return $req;

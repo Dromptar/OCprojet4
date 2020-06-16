@@ -15,9 +15,6 @@ if(!isset($_SESSION)){
 <p id="session"><?= $_SESSION['connected']?><br/>
 <a href="index.php?url=logout">Déconnexion</a></p>
 
-
-
-
 <section id="edition">
 
     <form action="http://localhost/projet4/index.php?url=blog" method="post">
@@ -30,11 +27,9 @@ if(!isset($_SESSION)){
                 <textarea id="texteditor" name="texteditor" value=<?= nl2br($post['content']) ?>></textarea>
             </div>
             <div>
-            <a href ="http://localhost/projet4/index.php?url=blog&id&update">Actualiser</a>
+            <a href ="http://localhost/projet4/index.php?url=blog&action=update&id=<?= $post['id'] ?>">Actualiser</a>
             </div>
     </form>
-
-
 
 
 </section>

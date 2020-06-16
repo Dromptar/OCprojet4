@@ -56,9 +56,11 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         else if (isset($_GET['id'])){
             /*var_dump($_GET);*/
             updateView();
-        }
-        else if (isset($_GET['update'])){
-            updateCheck();
+            
+            if (isset($_GET['update'])){
+                var_dump($_GET['update']);
+                /*updateCheck();*/
+            }
         }
         else {
             postCheck();

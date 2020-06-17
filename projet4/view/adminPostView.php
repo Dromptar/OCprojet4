@@ -17,7 +17,7 @@ if(!isset($_SESSION)){
 
 <section id="edition">
 
-    <form action="http://localhost/projet4/index.php?url=blog" method="post">
+    <form action="http://localhost/projet4/index.php?url=blog&action=update&id=<?= $post['id'] ?>" method="post">
             <div id="editor_inputs">
                 <label>Auteur: <input type="text" id="author" name="author" value="<?= htmlspecialchars($post['author']) ?>"/></label>
                 <label>Titre: <input type="text" id="title" name="title" value="<?= htmlspecialchars($post['title']) ?>"/></label>
@@ -27,7 +27,7 @@ if(!isset($_SESSION)){
                 <textarea id="texteditor" name="texteditor" value=<?= nl2br($post['content']) ?>></textarea>
             </div>
             <div>
-            <a href ="http://localhost/projet4/index.php?url=blog&action=update&id=<?= $post['id'] ?>">Actualiser</a>
+            <input type="submit" name="update" value="Actualiser" /></a>
             </div>
     </form>
 

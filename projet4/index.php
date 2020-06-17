@@ -51,7 +51,7 @@ if (isset($_GET['url']) && !empty($_GET['url']))
         
         if (isset($_GET['delete'])){
             deleteCheck();
-            listAllPosts();     
+            listAllPosts();   
         }
         else if (isset($_GET['id'])){
             /*var_dump($_GET);*/

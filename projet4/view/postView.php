@@ -48,13 +48,14 @@
     </aside>
     
     <aside id="comment_display">
-
+    
         <?php
         while ($comment = $comments->fetch())
         {
         ?>
         <div class="new-comment">
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+            <a href ="http://localhost/projet4/index.php?url=post&action=flag&id=<?= $comment['id'] ?>">Signaler</a>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
         </div>
             

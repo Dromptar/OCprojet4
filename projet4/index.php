@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION)){
+if (!isset($_SESSION)) {
 
     session_start();
 }
@@ -11,72 +11,51 @@ require_once("controller/blog.php");
 
 
 
-if (isset($_GET['url']) && !empty($_GET['url']))
-{
-    if ($_GET['url']=="home") {
+if (isset($_GET['url']) && !empty($_GET['url'])) {
+    if ($_GET['url'] == "home") {
         listLastPosts();
-    }
+    } elseif ($_GET['url'] == "connection") {
 
-    elseif ($_GET['url']=="connection") {
-        
         if (isset($_SESSION['connected'])) {
-            myAdminSpace();         
-        }
-        
-        elseif (isset($_POST['connexion'])) {
+            myAdminSpace();
+        } elseif (isset($_POST['connexion'])) {
             logIn();
-                      
-        } else{
+        } else {
             connection();
         }
-
-    }
-
-    elseif ($_GET['url']=="logout") {
+    } elseif ($_GET['url'] == "logout") {
         logout();
-    }
-
-    elseif ($_GET['url']=="register") {
+    } elseif ($_GET['url'] == "register") {
 
         if (isset($_POST['inscription'])) {
             registerCheck();
         } else {
             registerForm();
         }
-     
-    }
-    
-            
-    elseif ($_GET['url']=="blog") {
-        
-        if (isset($_GET['delete'])){
+    } elseif ($_GET['url'] == "blog") {
+
+        if (isset($_GET['delete'])) {
             deleteCheck();
-            listAllPosts();   
-        }
-        else if (isset($_GET['id'])){
-            /*var_dump($_GET);*/
+            listAllPosts();
+        } else if (isset($_GET['id'])) {
             updateView();
-            
-            if (isset($_GET['update'])){
-                var_dump($_GET['update']);
-                /*updateCheck();*/
+
+            if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
+                updateCheck();
             }
-        }
-        else {
+        } else {
             postCheck();
             listAllPosts();
         }
-         
-    }
-    
-    elseif ($_GET['url']=="post") {
+    } elseif ($_GET['url'] == "post") {
         displayPostCheck();
-    }
+        
+        if (isset($_GET['action']) && ($_GET['action'] == 'flag')){
+            addFlag();
+        }
 
-    elseif ($_GET['url']=='addComment') {
+    } elseif ($_GET['url'] == 'addComment') {
         commentCheck();
     }
-
-}
-
-else require_once("controller/home.php");
+    
+} else require_once("controller/home.php");

@@ -45,10 +45,21 @@ footer
     color: rgb(237,233,215);
     height: 150px;
     bottom: 0;
-    background-color: rgb(33,30,31);
+    /*background-color: rgb(33,30,31);*/
     display: flex;
     justify-content: space-around;
+    background: url("../images/footer.jpg") repeat center center;
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: url("../images/footer.jpg");
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
 }
+
 
 footer ul
 {

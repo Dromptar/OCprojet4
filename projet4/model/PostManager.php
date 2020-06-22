@@ -41,8 +41,7 @@ class PostManager extends Manager
                     'id' => $_GET['delete']
                     ));
         
-        return $req;
-        
+        return $req;  
     }
 
     public function updatePost()
@@ -55,7 +54,7 @@ class PostManager extends Manager
                     'title' => $_POST['title'],
                     'quote' => $_POST['quote'],
                     'content' => $_POST['texteditor'],
-                    'id' => $_GET['update']
+                    'id' => $_GET['id']
                     ));
                     
         return $req;

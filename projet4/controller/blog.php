@@ -126,7 +126,5 @@ function addFlag()
     $commentManager = new CommentManager();
     $reportComment = $commentManager->addFlag();
 
-  
-    var_dump($_GET);
-    
+       
 }

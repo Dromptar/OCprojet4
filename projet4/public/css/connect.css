@@ -17,6 +17,11 @@
     left: 65%
 }
 
+#connect_formulaire a:hover
+{
+    color: rgb(237,233,215);
+}
+
 #connect_formulaire p
 {
     margin-top: 40px;
@@ -33,5 +38,38 @@
 }
 
 
+@media screen and (max-width: 479px) {
 
 
+    #connect_formulaire 
+    {
+        width: 45%;
+        left: 0;
+        margin: auto;
+    }
+
+    #connect_formulaire p
+    {
+        margin-top: 15px;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    #connect_formulaire {
+        
+        width: 25%;
+        left: 40%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+
+    #connect_formulaire {
+        
+        width: 20%;
+        left: 50%;
+    }
+}

@@ -36,12 +36,11 @@ class CommentManager extends Manager
     public function addFlag()
     {
         $db = $this->database;
-        $flag = $db->prepare('UPDATE comments SET flag= flag+1 WHERE id= :id, post_id= :post_id');
-        $flag->execute(array(
-                        'id' => $_GET['id'],
-                        'post_id' => $_GET['post_id']
-                            ));
-        return $flag;
+        $flags = $db->prepare('UPDATE comments SET flag= flag+1 WHERE id=:id');
+        $flags->execute(array(
+                        'id'=>$_GET['comId']
+                        ));
+        return $flags;
     }
    
 }

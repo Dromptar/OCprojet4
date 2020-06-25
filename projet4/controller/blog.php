@@ -126,5 +126,6 @@ function addFlag()
     $commentManager = new CommentManager();
     $reportComment = $commentManager->addFlag();
 
-       
+    echo "<script>alert(\"Commentaire signalé !\")</script>";
+    
 }

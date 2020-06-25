@@ -69,23 +69,70 @@ section#comments
     flex-direction: column;
 }
 
+
 section#comments aside
 {
     margin: 0 auto;
+    color: rgb(237,233,215);
 }
-
 
 aside#comment_display
 {
     width: 50%;
 }
+
 .new-comment
 {
     padding: 0 10px;
     background-color: rgb(237,233,215);
     margin: 20px 0;
+    color: rgb(33, 30, 31);
     border: 1px solid white;
     box-shadow: 5px 5px #373737;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 479px) {
+
+    .banner-text
+    {
+        font-size: 1.2rem;
+    }
+
+    section#posts
+    {
+        padding-top: 25%;
+    }
+
+    .solo-post
+    {
+        width: 80%;
+        padding: 20px 20px;        
+    }
+
+    aside#comment_display
+    {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 979px) {
+
+    section#posts
+    {
+        padding-top: 20%;
+    }
+
+    .solo-post
+    {
+        width: 60%;
+    }
+    aside#comment_display
+    {
+        width: 70%;
+    }
+
+}
+
 

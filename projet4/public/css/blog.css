@@ -5,7 +5,16 @@ body
 
 nav#menu
 {
-    background-color: rgb(33,30,31);
+    background: url("../images/footer.jpg") repeat center center;
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: url("../images/footer.jpg");
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
 }
 
 section#posts
@@ -30,6 +39,7 @@ section#posts
 .post h1
 {
     font-size: 1.8em;
+    text-align: center;
 }
 
 .post h2
@@ -43,10 +53,7 @@ section#posts
     font-size: 1.2em;
 }
 
-.post form
-{
-    
-}
+
 .read-button
 {
     width: 130px;
@@ -73,3 +80,42 @@ section#posts
     color: rgb(237,233,215)
 }
 
+
+@media screen and (max-width: 479px) {
+
+
+    .post
+    {
+        width: 80%;
+    }
+
+    .post h1
+    {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .post h2
+    {
+        font-size: 0.8em;
+    }
+
+    .post p
+    {
+        text-align: justify;
+        font-size: 1em;
+    }
+
+    .read-button 
+    {
+        width: 108px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 979px) {
+
+    .post
+    {
+        width: 70%;
+    }
+}

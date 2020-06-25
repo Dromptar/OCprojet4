@@ -16,7 +16,6 @@ function myAdminSpace() {
 function signUp()
 {
     $logsManager = new LogsManager();
-    
     $newMember = $logsManager->addMember();
 
     myAdminSpace();
@@ -26,7 +25,6 @@ function signUp()
 function registerCheck() 
 {
     $logsManager = new LogsManager();
-    
     $isValid = $logsManager->logsCheck();
 
     if (isset($_POST['pseudo']) && !empty($_POST['pseudo']) && htmlspecialchars($_POST['pseudo'])
@@ -35,7 +33,8 @@ function registerCheck()
            
         if ($isValid -> fetch())
         {
-            echo 'Pseudonyme et/ou email déjà utilisé. !<br />';
+            require_once("view/registerView.php");
+            echo "<script>alert(\"'Pseudonyme et/ou email déjà utilisé.\")</script>";
             die();
         }
         
@@ -45,11 +44,13 @@ function registerCheck()
                     signUp();
                              
                 } else {
-                    echo ' Les mots de passes ne correspondent pas et/ou l\'adresse mail n\'est pas valide.';
+                    require_once("view/registerView.php");
+                    echo "<script>alert(\"Les mots de passes ne correspondent pas et/ou l\'adresse mail n\'est pas valide.\")</script>";
                 }
 
         } else {
-                echo' Veuillez remplir tous les champs';
+            require_once("view/registerView.php");
+            echo "<script>alert(\"Veuillez remplir tous les champs.\")</script>";
         }    
 } 
 
@@ -73,7 +74,8 @@ function logIn(){
             require_once("view/adminView.php");
         }
             else {
-            echo 'Mauvais identifiant ou mot de passe !';
+                require_once("view/connectView.php");
+                echo "<script>alert(\"Mauvais identifiant et/ou mot de passe !\")</script>";
             }
 }
 

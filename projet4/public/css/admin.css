@@ -38,3 +38,12 @@ p#session :visited
 {
     color: white;
 }
+
+@media screen and (max-width: 479px) {
+
+    #editor_inputs
+    {
+        margin-top: 25%;
+    }
+
+}

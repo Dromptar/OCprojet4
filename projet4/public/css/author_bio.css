@@ -1,15 +1,13 @@
 section#author-bio
 {
     display: flex;
+    flex-direction: column;   
     justify-content: center;
     align-items: center;
-    height: 400px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 10%;
     padding-bottom: 10%;
-    padding-left: 100px;
-    padding-right: 100px;
     background-image: linear-gradient(to bottom, rgb(33,31,78), rgb(84,71,157), rgb(164,162,182));
     border-bottom: 2px solid black;
     
@@ -31,10 +29,8 @@ section#author-bio
 #bio
 {
    flex-wrap: wrap;
-   padding-left: 20px;
-   text-align: justify;
    color: rgb(237,233,215);
-   width: 60%;;
+   width: 50%;;
 }
 
 #bio h2
@@ -46,7 +42,35 @@ section#author-bio
 
 #bio p
 {
-    column-count: 2;
     font-size: 1.2em;
     font-family: 'roboto';
+    text-align: justify
+}
+
+@media screen and (max-width: 479px) {
+
+    
+    #picture img
+    {
+        height: 200px;
+        width: 200px;
+    }
+
+    #bio
+    {
+        color: rgb(237,233,215);
+        width: 100%;;
+    }
+
+    #bio h2
+    {
+       font-size: 1.1em;
+    }
+
+    #bio p
+    {
+        font-size: 0.8em;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }

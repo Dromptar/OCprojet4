@@ -10,22 +10,22 @@ function navChange() {
 
     if (scrolling >= 654) {
 
-        document.getElementById('menu').style.backgroundColor = "rgb(33,30,31";
+        document.getElementById('menu').style.opacity = 10;
     } else {
-        document.getElementById('menu').style.backgroundColor = "transparent";
+        document.getElementById('menu').style.opacity = 0.5;
     }
 }
 
 
 function mouseOver() {
 
-    document.getElementById('menu').style.backgroundColor = "rgb(33,30,31)";
+  document.getElementById('menu').style.opacity = 10;;
 
   }
 
 function mouseOut() {
 
-    document.getElementById('menu').style.backgroundColor = "transparent";
+  document.getElementById('menu').style.opacity = 0.5;;
 
 }
 

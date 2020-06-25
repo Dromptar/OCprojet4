@@ -1,7 +1,6 @@
 section#articles
 {
     color: rgb(33,30,31);
-    height: 400px;
     padding-top: 10%;
     padding-bottom: 10%;
     display: flex;
@@ -47,3 +46,34 @@ section#articles
 {
     text-align: center;
 }
+
+@media screen and (max-width: 479px) {
+
+    
+    section#articles :nth-child(2), section#articles :nth-child(3)
+    {
+        display: none;
+    }
+
+    .newPost
+    {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 979px) {
+
+    section#articles
+    {
+        flex-direction: column;
+    }
+
+    .newPost
+    {
+        margin-bottom: 20px;
+    }
+
+}
+

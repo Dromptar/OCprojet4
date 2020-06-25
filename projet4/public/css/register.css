@@ -35,3 +35,33 @@
     text-align: center;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 479px) {
+
+
+    #register_formulaire 
+    {
+        width: 45%;
+        left: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+    #register_formulaire
+    {
+        width: 25%;
+        left: 40%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+
+    #register_formulaire 
+    {        
+        width: 20%;
+        left: 50%;
+    }
+}

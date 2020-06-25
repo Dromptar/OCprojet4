@@ -66,12 +66,18 @@ footer ul
     font-size: 1.2em;
     padding: 0;
     margin: auto 0;
+    
 }
 
-footer li, a
+#foot-tabs :nth-child(1), #foot-social :nth-child(1)
+{
+    list-style-type: none;
+}
+
+footer li a
 {
     text-decoration: none;
-    list-style-type: none;
+    font-size: 0.8em;
 }
 
 a:visited
@@ -89,8 +95,23 @@ footer a:visited
 {
     z-index: 11;
     position: fixed;
-    color: white;
+    color: rgb(237,233,215);
     top: 0;
     right: 1%;
     font-style: italic;
+}
+
+@media screen and (max-width: 479px) {
+
+    
+    footer ul
+    {
+        font-size: 0.9em;
+    }
+
+    #session
+    {
+        top: 8px;
+        font-size: 0.6em;
+    }
 }

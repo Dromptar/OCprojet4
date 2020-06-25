@@ -1,4 +1,10 @@
+<?php 
 
+if(!isset($_SESSION)){
+
+    session_start();
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -22,17 +28,21 @@
             <div id="logo"><a href="index.php?url=home"><img src="public/images/book.png" alt="logo"></a></div>
          
 
-            <ul id="nav-tabs">
+            <ul id="navTabs">
                 <li><i class="fas fa-home"></i><a href="index.php?url=home">Home</a></li>
                 <li><a href="index.php?url=blog">Les chapitres</a></li>
                 <li><a href="index.php?url=connection">Mon espace</a></li>
             </ul>
 
-            <ul id="nav-social">
+            <ul id="navSocial">
                 <li><i class="fab fa-facebook-f"></i></li>
                 <li><i class="fab fa-twitter"></i></li>
                 <li><i class="fab fa-instagram"></i></li>
             </ul>
+
+            <div class="burger">
+				<span></span>	
+			</div>
 
         </nav>
 
@@ -55,12 +65,12 @@
             </ul>
 
             <ul id="divers">
-                <li>Espace Admin</li>
-                <li>Contact</li>
+                <li><a href="index.php?url=connection">Espace Admin</a></li>
             </ul>
-            
         
         </footer>
+        
+        <script src="public/js/burger.js"></script>
 
     </body>
 </html>

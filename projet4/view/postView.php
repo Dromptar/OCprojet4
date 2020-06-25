@@ -50,13 +50,13 @@
     <aside id="comment_display">
     
         <?php
-        while ($comment = $comments->fetch())
+        while ($comment = $comments->fetch()) 
         {
         ?>
         <div class="new-comment">
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-            <a href ="http://localhost/projet4/index.php?url=post&action=flag&id=<?= $comment['id'] ?>
-                    &post_id=<?= $comment['post_id'] ?>">Signaler</a>
+            <a href ="http://localhost/projet4/index.php?url=post&action=flag&id=<?= $post['id'] ?>
+            &comId=<?= $comment['id'] ?>">Signaler</a>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
         </div>
             
@@ -67,6 +67,8 @@
     </aside>
 
 </section>
+
+<script src="public/js/menu.js"></script>
 
 
 <?php $content = ob_get_clean(); ?>

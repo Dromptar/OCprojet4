@@ -10,6 +10,26 @@ class CommentManager extends Manager
         parent::__construct();
     }
 
+    public function allComments()
+    {
+        $db = $this->database;
+        $req = $db->query('SELECT id, author, comment, flag,  DATE_FORMAT(comment_date, \'%d/%m/%Y\')
+                                AS comment_date_fr FROM comments where flag >= 1 ORDER BY comment_date DESC');
+        return $req;
+    }
+
+    public function deleteComment()
+    {
+        $db = $this->database;
+        $req = $db->prepare('DELETE FROM comments WHERE id= :id');
+        $req->execute(array(
+                    'id' => $_GET['deleteComment']
+                    ));
+        
+        return $req;  
+    }
+    
+
     public function getComments($postId)
     {
        $db = $this->database;

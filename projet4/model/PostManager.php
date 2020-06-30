@@ -38,7 +38,7 @@ class PostManager extends Manager
         $db = $this->database;
         $req = $db->prepare('DELETE FROM posts WHERE id= :id');
         $req->execute(array(
-                    'id' => $_GET['delete']
+                    'id' => $_GET['deletePost']
                     ));
         
         return $req;  
@@ -76,7 +76,6 @@ class PostManager extends Manager
         $req = $db->query('SELECT id, author, title, quote, content, DATE_FORMAT(date_post, \'%d/%m/%Y\')
          AS date_post_fr FROM posts ORDER BY date_post');
 
-
         /*var_dump($this->database);*/
 
         return $req;
@@ -90,7 +89,7 @@ class PostManager extends Manager
          AS date_post_fr FROM posts WHERE id = ?');
         $req->execute(array($postId));
         $post = $req->fetch();
-        
+       
         return $post;
     }
 

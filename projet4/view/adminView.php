@@ -4,9 +4,9 @@ if(!isset($_SESSION)){
 
     session_start();
 }
+require_once("controller/blog.php");
 
-
- $title = 'Espace Admin'; ?>
+$title = 'Espace Admin'; ?>
 
 
 
@@ -30,16 +30,35 @@ if(!isset($_SESSION)){
                 <textarea id="texteditor" name="texteditor">Bonjour Jean !</textarea>
             </div>
             <div>
-                <input type="submit" name="publish" value="Publier" />
+                <input id="publish" type="submit" name="publish" value="Publier" />
             </div>
     </form>
 
+</section>
 
 
+<p id="commentsManager"><button class="flagsManager">Gestion des commentaires</button></p>
+
+<section id="flagsManagerSpace">
+
+        <?php
+        while ($allCom = $allComments->fetch()) 
+        {
+        ?>
+        <div class="new-comment">
+            <p><strong><?= htmlspecialchars($allCom['author']) ?></strong> le <?= $allCom['comment_date_fr'] ?></p>
+            <p><?= nl2br(htmlspecialchars($allCom['comment'])) ?></p>
+            <p><?= nl2br(htmlspecialchars($allCom['flag'])) ?></p>
+            <a href ="http://localhost/projet4/index.php?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
+        </div>  
+        <?php
+        }
+        ?>
 
 </section>
 
 <script src="public/js/textEditor.js"></script>
+<script src="public/js/comments.js"></script>
 
 <?php $content = ob_get_clean(); ?>
 

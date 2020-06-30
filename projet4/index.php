@@ -15,14 +15,21 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
     if ($_GET['url'] == "home") {
         listLastPosts();
     } elseif ($_GET['url'] == "connection") {
-
         if (isset($_SESSION['connected'])) {
-            myAdminSpace();
+            
+            if (isset($_GET['deleteComment'])) {
+                commentDeleteCheck();
+                listAllComments();
+            } else {
+                listAllComments();
+            }
         } elseif (isset($_POST['connexion'])) {
             logIn();
+
         } else {
-            connection();
+            connection();  
         }
+
     } elseif ($_GET['url'] == "logout") {
         logout();
     } elseif ($_GET['url'] == "register") {
@@ -34,8 +41,8 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         }
     } elseif ($_GET['url'] == "blog") {
 
-        if (isset($_GET['delete'])) {
-            deleteCheck();
+        if (isset($_GET['deletePost'])) {
+            postDeleteCheck();
             listAllPosts();
         } else if (isset($_GET['id'])) {
             updateView();
@@ -49,13 +56,11 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         }
     } elseif ($_GET['url'] == "post") {
         displayPostCheck();
-        
-        if (isset($_GET['action']) && ($_GET['action'] == 'flag')){
+
+        if (isset($_GET['action']) && ($_GET['action'] == 'flag')) {
             addFlag();
         }
-
     } elseif ($_GET['url'] == 'addComment') {
         commentCheck();
     }
-    
 } else require_once("controller/home.php");

@@ -1,16 +1,19 @@
 <?php
 
 require_once("model/LogsManager.php");
+require_once("model/CommentManager.php");
+require_once("controller/blog.php");
 
 function registerForm() 
 {
     require_once("view/registerView.php");
 }
 
-function myAdminSpace() {
-
-    require_once("view/adminView.php");
-
+function myAdminSpace() 
+{
+    $commentManager = new CommentManager();
+    $allComments = $commentManager->allComments();
+    require_once("view/adminView.php");    
 }
 
 function signUp()
@@ -71,7 +74,7 @@ function logIn(){
             $_SESSION['id'] = $score['id'];
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['connected'] = $_POST['pseudo'] ;
-            require_once("view/adminView.php");
+            myAdminSpace();
         }
             else {
                 require_once("view/connectView.php");

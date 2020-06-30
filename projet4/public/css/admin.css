@@ -6,7 +6,7 @@ body
 section#edition
 {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 section#edition form
@@ -30,13 +30,41 @@ section#edition form
 #editor_inputs input
 {
     width: 100%;
-
     margin-bottom: 5px;
+}
+
+#publish
+{
+    font-size: 1.5em;
+    color: rgb(237,233,215);
+    background-color: rgb(33, 30, 31);
+    padding: 10px;
+    align-self: flex-end;
 }
 
 p#session :visited
 {
     color: white;
+}
+
+#commentsManager
+{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+#commentsManager button
+{
+    font-size: 1.5em;
+    color: rgb(237,233,215);
+    background-color: rgb(33, 30, 31);
+    padding: 10px;
+    cursor: pointer;
+}
+
+#flagsManagerSpace
+{
+    display: none;
 }
 
 @media screen and (max-width: 479px) {

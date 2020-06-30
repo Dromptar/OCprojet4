@@ -21,7 +21,7 @@
       <?php if (isset($_SESSION['connected']))
             {
             ?>
-              <a href ="http://localhost/projet4/index.php?url=blog&delete=<?= $data['id'] ?>">Supprimer</a>
+              <a href ="http://localhost/projet4/index.php?url=blog&deletePost=<?= $data['id'] ?>">Supprimer</a>
               <a href ="http://localhost/projet4/index.php?url=blog&id=<?= $data['id'] ?>">Modifier</a>
       <?php
             }

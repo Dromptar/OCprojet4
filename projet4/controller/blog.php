@@ -2,6 +2,7 @@
 
 require_once("model/PostManager.php");
 require_once("model/CommentManager.php");
+require_once("controller/logs.php");
 
 function listAllPosts()
 {
@@ -50,9 +51,9 @@ function post()
     $newPost = $postManager->newPost();
 }
 
-function deleteCheck()
+function postDeleteCheck()
 {
-    if (isset($_GET['delete']) && $_GET['delete'] > 0) {
+    if (isset($_GET['deletePost']) && $_GET['deletePost'] > 0) {
         deletePost();
     }
 }
@@ -92,6 +93,26 @@ function updatePost()
     header('Location: http://localhost/projet4/index.php?url=post&id=' .$_GET['id']);
 }
 
+function listAllComments()
+{
+    $commentManager = new CommentManager();
+    $allComments = $commentManager->allComments();
+
+    myAdminSpace();
+}
+
+function commentDeleteCheck()
+{
+    if (isset($_GET['deleteComment']) && $_GET['deleteComment'] > 0) {
+        deleteComment();
+    }
+}
+
+function deleteComment()
+{
+    $CommentManager = new CommentManager();
+    $deleteComment = $CommentManager->deleteComment();
+}
 
 function commentCheck()
 {
@@ -129,3 +150,4 @@ function addFlag()
     echo "<script>alert(\"Commentaire signalé !\")</script>";
     
 }
+

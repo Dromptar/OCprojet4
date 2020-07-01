@@ -32,8 +32,7 @@
 
 .slide-content {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     font-size: 1.5rem;
     
     
@@ -43,7 +42,7 @@
 
     color: #fff;
     text-shadow:  2px 2px #000;
-    align-self: self-end;
+    align-self: flex-end;
     margin-bottom: 10%;
     margin-right: 5%;
     

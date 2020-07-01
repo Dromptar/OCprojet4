@@ -42,6 +42,16 @@ section#articles
     /*text-align: justify; */       
 }
 
+.newPost a
+{
+    color: rgb(33,30,31);
+}
+
+.newPost a:visited
+{
+    color: rgb(33,30,31);
+}
+
 .date
 {
     text-align: center;

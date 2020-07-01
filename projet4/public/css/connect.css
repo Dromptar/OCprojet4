@@ -19,7 +19,7 @@
 
 #connect_formulaire a:hover
 {
-    color: rgb(237,233,215);
+    color: white;
 }
 
 #connect_formulaire p
@@ -35,6 +35,8 @@
 {
     font-size: 1.2em;
     font-weight: bold;
+    color: rgb(237,233,215);
+    text-decoration: none;
 }
 
 

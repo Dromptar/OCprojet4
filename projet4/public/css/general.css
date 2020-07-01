@@ -80,14 +80,15 @@ footer li a
     font-size: 0.8em;
 }
 
-a:visited
+footer a, nav a
 {
-    color:rgb(33, 30, 31);
+    text-decoration: none;
+    color:rgb(237,233,215);
 }
 
-footer a:visited
+footer a:visited, nav a:visited
 {
-    color: rgb(237,233,215);
+    color:rgb(237,233,215);
 }
 
 

@@ -7,7 +7,8 @@ if (!isset($_SESSION)) {
 
 require_once("controller/home.php");
 require_once("controller/logs.php");
-require_once("controller/blog.php");
+require_once("controller/blogPosts.php");
+require_once("controller/blogComments.php");
 
 
 

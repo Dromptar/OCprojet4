@@ -2,7 +2,8 @@
 
 require_once("model/LogsManager.php");
 require_once("model/CommentManager.php");
-require_once("controller/blog.php");
+require_once("controller/blogPosts.php");
+require_once("controller/blogComments.php");
 
 function registerForm() 
 {

@@ -5,7 +5,6 @@ require_once("model/CommentManager.php");
 require_once("controller/logs.php");
 require_once("controller/blogComments.php");
 
-
 function listAllPosts()
 {
     $postManager = new PostManager();
@@ -94,6 +93,3 @@ function updatePost()
 
     header('Location: http://localhost/projet4/index.php?url=post&id=' .$_GET['id']);
 }
-
-
-

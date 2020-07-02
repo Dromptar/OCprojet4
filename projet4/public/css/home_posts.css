@@ -45,6 +45,7 @@ section#articles
 .newPost a
 {
     color: rgb(33,30,31);
+    text-decoration: none;
 }
 
 .newPost a:visited
@@ -52,9 +53,16 @@ section#articles
     color: rgb(33,30,31);
 }
 
+.newPost i
+{
+    font-size: 2em;
+    margin-top: 10px;
+}
+
 .date
 {
     text-align: center;
+    font-size: 0.7em;
 }
 
 @media screen and (max-width: 479px) {

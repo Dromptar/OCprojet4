@@ -93,8 +93,9 @@ while ($data = $lastPosts->fetch())
           <?= nl2br($data['quote']) ?>
           <br/>
         </p>
+        <a href="index.php?url=post&amp;id=<?= $data['id'] ?>"><i class="fas fa-sign-in-alt"></i></a>
         <p class="date"><em>Le <?= $data['date_post_fr'] ?></em></p>
-        <a href="index.php?url=post&amp;id=<?= $data['id'] ?>">Lire le chapitre</a>
+        
     </div>
 <?php
 }

@@ -91,5 +91,5 @@ function updatePost()
     $postManager = new PostManager();
     $updatePost = $postManager->updatePost();
 
-    header('Location: http://localhost/projet4/index.php?url=post&id=' .$_GET['id']);
+    header('Location: http://dromptar.com/projet4/index.php?url=post&id=' .$_GET['id']);
 }

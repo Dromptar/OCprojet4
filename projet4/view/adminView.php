@@ -4,7 +4,9 @@ if(!isset($_SESSION)){
 
     session_start();
 }
-require_once("controller/blog.php");
+
+require_once("controller/blogPosts.php");
+require_once("controller/blogComments.php");
 
 $title = 'Espace Admin'; ?>
 
@@ -16,11 +18,9 @@ $title = 'Espace Admin'; ?>
 <a href="index.php?url=logout">Déconnexion</a></p>
 
 
-
-
 <section id="edition">
 
-    <form action="http://localhost/projet4/index.php?url=blog" method="post">
+    <form action="http://dromptar.com/projet4/index.php?url=blog" method="post">
             <div id="editor_inputs">
                 <input type="text" id="author" name="author" placeholder="Auteur"/>
                 <input type="text" id="title" name="title" placeholder="Titre"/>
@@ -49,7 +49,7 @@ $title = 'Espace Admin'; ?>
             <p><strong><?= htmlspecialchars($allCom['author']) ?></strong> le <?= $allCom['comment_date_fr'] ?></p>
             <p><?= nl2br(htmlspecialchars($allCom['comment'])) ?></p>
             <p><?= nl2br(htmlspecialchars($allCom['flag'])) ?></p>
-            <a href ="http://localhost/projet4/index.php?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
+            <a href ="http://dromptar.com/projet4/index.php?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
         </div>  
         <?php
         }

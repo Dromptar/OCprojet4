@@ -19,7 +19,7 @@ $title = 'Connexion'; ?>
             <input type="text" name="pseudo" placeholder="Identifiant" required/>
             <input type="password" name="pass" placeholder="Mot de Passe" required/>
             <!--<label>Connexion automatique <input type="checkbox"  name="connexion" checked> </label> !-->
-            <input type="submit" name="connexion" value="Se connecter" />
+            <input class="logInput" type="submit" name="connexion" value="Se connecter" />
 
         </form>
 

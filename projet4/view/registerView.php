@@ -13,7 +13,7 @@
             <input type="password" name="pass2" placeholder="Retapez le mot de passe" />
             <input type="text" name="email" placeholder="Email" />
             <!--<label>Connexion automatique <input type="checkbox"  name="connexion" checked> </label> !-->
-            <input type="submit" name="inscription" value="Je m'inscris" />
+            <input class="logInput" type="submit" name="inscription" value="Je m'inscris" />
 
         </form>
 

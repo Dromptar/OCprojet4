@@ -14,7 +14,7 @@ class CommentManager extends Manager
     {
         $db = $this->database;
         $req = $db->query('SELECT id, author, comment, flag,  DATE_FORMAT(comment_date, \'%d/%m/%Y\')
-                                AS comment_date_fr FROM comments where flag >= 1 ORDER BY comment_date DESC');
+                                AS comment_date_fr FROM comments where flag >= 5 ORDER BY comment_date DESC');
         return $req;
     }
 

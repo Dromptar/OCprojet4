@@ -93,7 +93,7 @@ while ($data = $lastPosts->fetch())
           <?= nl2br($data['quote']) ?>
           <br/>
         </p>
-        <a href="index.php?url=post&amp;id=<?= $data['id'] ?>"><i class="fas fa-sign-in-alt"></i></a>
+        <a href="<?=$GLOBALS['nomDeDomaine']?>?url=post&amp;id=<?= $data['id'] ?>"><i class="fas fa-sign-in-alt"></i></a>
         <p class="date"><em>Le <?= $data['date_post_fr'] ?></em></p>
         
     </div>

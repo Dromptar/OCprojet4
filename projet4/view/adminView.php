@@ -15,12 +15,12 @@ $title = 'Espace Admin'; ?>
 <?php ob_start(); ?>
 
 <p id="session"><?= $_SESSION['connected']?><br/>
-<a href="index.php?url=logout">Déconnexion</a></p>
+<a href="<?=$GLOBALS['nomDeDomaine']?>?url=logout">Déconnexion</a></p>
 
 
 <section id="edition">
 
-    <form action="http://dromptar.com/projet4/index.php?url=blog" method="post">
+    <form action="<?=$GLOBALS['nomDeDomaine']?>?url=blog" method="post">
             <div id="editor_inputs">
                 <input type="text" id="author" name="author" placeholder="Auteur"/>
                 <input type="text" id="title" name="title" placeholder="Titre"/>
@@ -49,7 +49,7 @@ $title = 'Espace Admin'; ?>
             <p><strong><?= htmlspecialchars($allCom['author']) ?></strong> le <?= $allCom['comment_date_fr'] ?></p>
             <p><?= nl2br(htmlspecialchars($allCom['comment'])) ?></p>
             <p><?= nl2br(htmlspecialchars($allCom['flag'])) ?></p>
-            <a href ="http://dromptar.com/projet4/index.php?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
+            <a href ="<?=$GLOBALS['nomDeDomaine']?>?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
         </div>  
         <?php
         }

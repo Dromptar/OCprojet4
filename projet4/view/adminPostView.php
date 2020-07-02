@@ -13,11 +13,11 @@ if(!isset($_SESSION)){
 <?php ob_start(); ?>
 
 <p id="session"><?= $_SESSION['connected']?><br/>
-<a href="index.php?url=logout">Déconnexion</a></p>
+<a href="<?=$GLOBALS['nomDeDomaine']?>?url=logout">Déconnexion</a></p>
 
 <section id="edition">
 
-    <form action="http://dromptar.com/projet4/index.php?url=blog&action=update&id=<?= $post['id'] ?>" method="post">
+    <form action="<?= $GLOBALS['nomDeDomaine']?>'url=blog&action=update&id=<?= $post['id'] ?>" method="post">
             <div id="editor_inputs">
                 <label>Auteur: <input type="text" id="author" name="author" value="<?= htmlspecialchars($post['author']) ?>"/></label>
                 <label>Titre: <input type="text" id="title" name="title" value="<?= htmlspecialchars($post['title']) ?>"/></label>

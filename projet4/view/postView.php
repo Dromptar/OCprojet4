@@ -21,7 +21,7 @@
     </p>
 </div>
 
-<p id="posts_list"><a href="index.php?url=blog">Retour à la liste des billets</a></p>
+<p id="posts_list"><a href="<?=$GLOBALS['nomDeDomaine']?>?url=blog">Retour à la liste des billets</a></p>
 
 </section>
 
@@ -31,7 +31,7 @@
 
     <h2>Commentaires</h2>
 
-        <form action="index.php?url=addComment&amp;id=<?= $post['id'] ?>" method="post">
+        <form action="<?=$GLOBALS['nomDeDomaine']?>?url=addComment&amp;id=<?= $post['id'] ?>" method="post">
             <div>
                 <label for="author">Auteur</label><br />
                 <input type="text" id="author" name="author" />
@@ -55,7 +55,7 @@
         ?>
         <div class="new-comment">
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-            <a href ="http://dromptar.com/projet4/index.php?url=post&action=flag&id=<?= $post['id'] ?>
+            <a href ="<?=$GLOBALS['nomDeDomaine']?>?url=post&action=flag&id=<?= $post['id'] ?>
             &comId=<?= $comment['id'] ?>">Signaler</a>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
         </div>

@@ -23,7 +23,7 @@ $title = 'Connexion'; ?>
 
         </form>
 
-        <p>Pas encore de compte ?<br/><a href="index.php?url=register">Inscrivez-Vous !</a></p>
+        <p>Pas encore de compte ?<br/><a href="<?=$GLOBALS['nomDeDomaine']?>?url=register">Inscrivez-Vous !</a></p>
 
     </div>
 

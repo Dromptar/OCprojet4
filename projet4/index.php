@@ -5,6 +5,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+require_once("config.php");
 require_once("controller/home.php");
 require_once("controller/logs.php");
 require_once("controller/blogPosts.php");

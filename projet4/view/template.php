@@ -25,13 +25,13 @@ if(!isset($_SESSION)){
 
         <nav id="menu">
 
-            <div id="logo"><a href="index.php?url=home"><img src="public/images/book.png" alt="logo"></a></div>
+            <div id="logo"><a href="<?=$GLOBALS['nomDeDomaine']?>?url=home"><img src="public/images/book.png" alt="logo"></a></div>
          
 
             <ul id="navTabs">
-                <li><i class="fas fa-home"></i><a href="index.php?url=home">Home</a></li>
-                <li><a href="index.php?url=blog">Les chapitres</a></li>
-                <li><a href="index.php?url=connection">Mon espace</a></li>
+                <li><i class="fas fa-home"></i><a href="<?=$GLOBALS['nomDeDomaine']?>?url=home">Home</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=blog">Les chapitres</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=connection">Mon espace</a></li>
             </ul>
 
             <ul id="navSocial">
@@ -52,9 +52,9 @@ if(!isset($_SESSION)){
 
         <ul id="foot-tabs">
                 <li>Plan du site</li>
-                <li><a href="index.php?url=home">Home</a></li>
-                <li><a href="index.php?url=blog">Les chapitres</a></li>
-                <li><a href="index.php?url=connection">Connexion</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=home">Home</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>url=blog">Les chapitres</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=connection">Connexion</a></li>
             </ul>
 
             <ul id="foot-social">
@@ -65,7 +65,7 @@ if(!isset($_SESSION)){
             </ul>
 
             <ul id="divers">
-                <li><a href="index.php?url=connection">Espace Admin</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=connection">Espace Admin</a></li>
             </ul>
         
         </footer>

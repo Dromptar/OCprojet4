@@ -91,7 +91,7 @@ function logOut() {
     // Suppression des variables de session et de la session
     $_SESSION = array();
     session_destroy();
-    header('Location: http://localhost/projet4/index.php?url=connection');
+    header('Location: ' .$GLOBALS['nomDeDomaine']. '?url=connection');
 
 
     // Suppression des cookies de connexion automatique

@@ -16,13 +16,13 @@
       <p><?= nl2br(substr($data['content'], 0, 300)) ?> (...)</p>
 
       <p class="read-button">
-        <a href="index.php?url=post&amp;id=<?= $data['id'] ?>">Lire le chapitre</a>
+        <a href="<?=$GLOBALS['nomDeDomaine']?>?url=post&amp;id=<?= $data['id'] ?>">Lire le chapitre</a>
       </p>
       <?php if (isset($_SESSION['connected']))
             {
             ?>
-              <a href ="http://dromptar.com/projet4/index.php?url=blog&deletePost=<?= $data['id'] ?>">Supprimer</a>
-              <a href ="http://dromptar.com/projet4/index.php?url=blog&id=<?= $data['id'] ?>">Modifier</a>
+              <a href ="<?=$GLOBALS['nomDeDomaine']?>?url=blog&deletePost=<?= $data['id'] ?>">Supprimer</a>
+              <a href ="<?=$GLOBALS['nomDeDomaine']?>?url=blog&id=<?= $data['id'] ?>">Modifier</a>
       <?php
             }
       ?>

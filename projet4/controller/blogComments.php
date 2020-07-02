@@ -5,7 +5,6 @@ require_once("model/CommentManager.php");
 require_once("controller/blogPosts.php");
 require_once("controller/logs.php");
 
-
 function listAllComments()
 {
     $commentManager = new CommentManager();
@@ -49,7 +48,7 @@ function addComment($postId, $author, $comment)
     if ($affectedLines === false) {
         throw new Exception('Impossible d\'ajouter le commentaire !');
     } else {
-        header('Location: index.php?url=post&id=' . $postId);
+        header('Location: ' .$GLOBALS['nomDeDomaine'].  '?url=post&id=' . $postId);
     }
 }
 

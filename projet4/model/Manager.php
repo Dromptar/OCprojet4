@@ -11,9 +11,8 @@ class Manager
 	{
 		try
 		{
-			$this->database = new PDO('mysql:host=localhost;port=3306;
-			dbname=projet4', 'root', '', 
-									array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$this->database = new PDO(' '.$GLOBALS['connectionString']. ', ' .$GLOBALS['dbUser']. ',
+			 ' .$GLOBALS['dbPassword']. ','. array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		}
 		catch(Exception $e)
 		{

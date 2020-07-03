@@ -53,7 +53,7 @@ if(!isset($_SESSION)){
         <ul id="foot-tabs">
                 <li>Plan du site</li>
                 <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=home">Home</a></li>
-                <li><a href="<?=$GLOBALS['nomDeDomaine']?>url=blog">Les chapitres</a></li>
+                <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=blog">Les chapitres</a></li>
                 <li><a href="<?=$GLOBALS['nomDeDomaine']?>?url=connection">Connexion</a></li>
             </ul>
 

@@ -11,8 +11,8 @@ class Manager
 	{
 		try
 		{
-			$this->database = new PDO(' '.$GLOBALS['connectionString']. ', ' .$GLOBALS['dbUser']. ',
-			 ' .$GLOBALS['dbPassword']. ','. array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			$this->database = new PDO($GLOBALS['connectionString'], $GLOBALS['dbUser'],
+			 $GLOBALS['dbPassword'], $GLOBALS['optionsPDO']);
 		}
 		catch(Exception $e)
 		{

@@ -69,7 +69,7 @@ function logIn(){
     $score = $resultat->fetch();
     $isPasswordCorrect = password_verify($_POST['pass'], $score['pass']);
     
-    if ($isPasswordCorrect) {
+    if ($isPasswordCorrect && ($_POST['pseudo'] == $GLOBALS['admin'])) {
                
             $pseudo = ($_POST['pseudo']);
             $_SESSION['id'] = $score['id'];

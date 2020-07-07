@@ -42,9 +42,14 @@ section#edition form
     align-self: flex-end;
 }
 
-p#session :visited
+p#session a
 {
-    color: white;
+    color: rgb(237,233,215);
+}
+
+p#session a:visited
+{
+    color: rgb(237,233,215);
 }
 
 #commentsManager

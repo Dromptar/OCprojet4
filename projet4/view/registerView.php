@@ -8,12 +8,12 @@
 
         <form class="logs" action="" method="POST">
 
-            <input type="text" name="pseudo" placeholder="Identifiant" />
-            <input type="password" name="pass1" placeholder="Mot de passe" />
-            <input type="password" name="pass2" placeholder="Retapez le mot de passe" />
-            <input type="text" name="email" placeholder="Email" />
+            <input class="logsInput" type="text" name="pseudo" placeholder="Identifiant" />
+            <input class="logsInput" type="password" name="pass1" placeholder="Mot de passe" />
+            <input class="logsInput" type="password" name="pass2" placeholder="Retapez le mot de passe" />
+            <input class="logsInput" type="text" name="email" placeholder="Email" />
             <!--<label>Connexion automatique <input type="checkbox"  name="connexion" checked> </label> !-->
-            <input class="logInput" type="submit" name="inscription" value="Je m'inscris" />
+            <input class="validateInput" type="submit" name="inscription" value="Je m'inscris" />
 
         </form>
 

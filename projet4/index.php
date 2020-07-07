@@ -20,7 +20,7 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         if (isset($_SESSION['connected'])) {
             
             if (isset($_GET['deleteComment'])) {
-                commentDeleteCheck();
+                commentDelete();
                 listAllComments();
             } else {
                 listAllComments();
@@ -44,20 +44,20 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
     } elseif ($_GET['url'] == "blog") {
 
         if (isset($_GET['deletePost'])) {
-            postDeleteCheck();
+            postDelete();
             listAllPosts();
         } else if (isset($_GET['id'])) {
             updateView();
 
             if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
-                updateCheck();
+                updatePost();
             }
         } else {
-            postCheck();
+            post();
             listAllPosts();
         }
     } elseif ($_GET['url'] == "post") {
-        displayPostCheck();
+        displayPost();
 
         if (isset($_GET['action']) && ($_GET['action'] == 'flag')) {
             addFlag();

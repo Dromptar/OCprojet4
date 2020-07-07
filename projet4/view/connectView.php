@@ -16,10 +16,10 @@ $title = 'Connexion'; ?>
 
         <form class="logs" action="" method="POST">
 
-            <input type="text" name="pseudo" placeholder="Identifiant" required/>
-            <input type="password" name="pass" placeholder="Mot de Passe" required/>
+            <input class="logsInput" type="text" name="pseudo" placeholder="Identifiant" required/>
+            <input class="logsInput" type="password" name="pass" placeholder="Mot de Passe" required/>
             <!--<label>Connexion automatique <input type="checkbox"  name="connexion" checked> </label> !-->
-            <input class="logInput" type="submit" name="connexion" value="Se connecter" />
+            <input class="validateInput" type="submit" name="connexion" value="Se connecter" />
 
         </form>
 

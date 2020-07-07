@@ -73,8 +73,6 @@
 
 <section id="articles">
 
-
-
 <?php
 
 while ($data = $lastPosts->fetch())

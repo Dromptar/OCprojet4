@@ -9,21 +9,16 @@ function listAllComments()
 {
     $commentManager = new CommentManager();
     $allComments = $commentManager->allComments();
+    require_once("view/adminView.php"); 
 
-    myAdminSpace();
 }
 
-function commentDeleteCheck()
+function commentDelete()
 {
     if (isset($_GET['deleteComment']) && $_GET['deleteComment'] > 0) {
-        deleteComment();
+        $CommentManager = new CommentManager();
+        $deleteComment = $CommentManager->deleteComment();
     }
-}
-
-function deleteComment()
-{
-    $CommentManager = new CommentManager();
-    $deleteComment = $CommentManager->deleteComment();
 }
 
 function commentCheck()
@@ -51,8 +46,6 @@ function addComment($postId, $author, $comment)
         header('Location: ' .$GLOBALS['nomDeDomaine'].  '?url=post&id=' . $postId);
     }
 }
-
-
 
 function addFlag()
 {

@@ -18,7 +18,7 @@ if(!isset($_SESSION)){
         <link href="public/css/main.css" rel="stylesheet" />
         <link href="public/images/bookicon.ico" rel="favicon" />
         <script src="https://kit.fontawesome.com/75492b6bf6.js"></script>
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.tiny.cloud/1/m4l5idahpp956ut9d7c8qydikp11k175cpm5zbdholz40oc1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
         
     <body>

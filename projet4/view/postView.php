@@ -39,7 +39,7 @@
                 <textarea id="comment" name="comment" placeholder="Ajouter un commentaire"></textarea>
             </div>
             <div>
-                <input type="submit" name="validate" value="Commenter" />
+                <input class="validateInput" type="submit" name="validate" value="Commenter" />
             </div>
         </form>
 

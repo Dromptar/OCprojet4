@@ -13,7 +13,7 @@
 
       <h2>Publié le <em><?= $data['date_post_fr'] ?></em></h2>
 
-      <p><?= nl2br(substr($data['content'], 0, 300)) ?> (...)</p>
+      <p><?= mb_substr($data['content'], 0, 300); ?> (...)</p>
 
       <p class="read-button">
         <a href="<?=$GLOBALS['nomDeDomaine']?>?url=post&amp;id=<?= $data['id'] ?>">Lire le chapitre</a>

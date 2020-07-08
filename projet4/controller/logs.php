@@ -5,6 +5,11 @@ require_once("model/CommentManager.php");
 require_once("controller/blogPosts.php");
 require_once("controller/blogComments.php");
 
+/**
+ * registerForm
+ * affiche la vue de l'ecran d'inscription
+ * @return void
+ */
 function registerForm() 
 {
     require_once("view/registerView.php");
@@ -17,16 +22,14 @@ function myAdminSpace()
     require_once("view/adminView.php");    
 }
 
-function signUp()
-{
-    $logsManager = new LogsManager();
-    $newMember = $logsManager->addMember();
 
-    myAdminSpace();
-
-}
-
-function registerCheck() 
+/**
+ * signUp
+ * verifie l existence des logs dans la bdd, que les champs soient bien renseignés et enregistre un membre
+ * dans la bdd ( table membres)
+ * @return void
+ */
+function signUp() 
 {
     $logsManager = new LogsManager();
     $isValid = $logsManager->logsCheck();
@@ -45,7 +48,10 @@ function registerCheck()
             if (($_POST['pass1'] == $_POST['pass2'])
                 && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['email'])) {  
                     
-                    signUp();
+                    $logsManager = new LogsManager();
+                    $newMember = $logsManager->addMember();
+                    require_once("view/connectView.php");
+                    echo "<script>alert(\"Félicitation ! Votre compte a bien été créé.\")</script>";
                              
                 } else {
                     require_once("view/registerView.php");
@@ -60,6 +66,11 @@ function registerCheck()
 
 
 
+/**
+ * logIn
+ * connecte un membre inscrit sur le site. Pour l'instant, seul l'admin peut se connecter
+ * @return void
+ */
 function logIn(){
 
     $logsManager = new LogsManager();
@@ -86,17 +97,11 @@ function logIn(){
 
 function logOut() {
 
-   
-
     // Suppression des variables de session et de la session
     $_SESSION = array();
     session_destroy();
     header('Location: ' .$GLOBALS['nomDeDomaine']. '?url=connection');
 
-
-    // Suppression des cookies de connexion automatique
-   /* setcookie('login', '');
-    setcookie('pass_hache', '');*/
 
 }
 

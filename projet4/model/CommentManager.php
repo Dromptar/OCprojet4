@@ -18,18 +18,24 @@ class CommentManager extends Manager
         return $req;
     }
 
-    public function deleteComment()
+    public function deleteComment($deleteComment)
     {
         $db = $this->database;
         $req = $db->prepare('DELETE FROM comments WHERE id= :id');
         $req->execute(array(
-                    'id' => $_GET['deleteComment']
+                    'id' => $deleteComment
                     ));
         
         return $req;  
     }
     
-
+       
+    /**
+     * getComments
+     *
+     * @param  mixed $postId
+     * @return void
+     */
     public function getComments($postId)
     {
        $db = $this->database;
@@ -53,12 +59,12 @@ class CommentManager extends Manager
     }
 
  
-    public function addFlag()
+    public function addFlag($comId)
     {
         $db = $this->database;
         $flags = $db->prepare('UPDATE comments SET flag= flag+1 WHERE id=:id');
         $flags->execute(array(
-                        'id'=>$_GET['comId']
+                        'id'=>$comId
                         ));
         return $flags;
     }

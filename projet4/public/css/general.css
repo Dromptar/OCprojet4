@@ -65,10 +65,14 @@ footer ul
 {
     font-size: 1.2em;
     padding: 0;
-    margin: auto 0;
-    list-style-type: none;
-    
+    margin: auto 0;    
 }
+
+ul#foot-tabs, ul#foot-social, ul#divers
+{
+    list-style-type: none;
+}
+
 
 footer a
 {

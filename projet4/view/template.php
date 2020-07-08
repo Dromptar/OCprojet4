@@ -11,7 +11,7 @@ if(!isset($_SESSION)){
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="description" content="test" />
+        <meta name="description" content="Bienvenue dans mon humble univers." />
         <meta name="keywords" content="bip bip" />
         <meta name="author" content="nom" />
         <title><?= $title ?></title>

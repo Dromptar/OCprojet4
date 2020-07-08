@@ -20,7 +20,7 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         if (isset($_SESSION['connected'])) {
             
             if (isset($_GET['deleteComment'])) {
-                commentDelete();
+                commentDelete($_GET['deleteComment']);
                 listAllComments();
             } else {
                 listAllComments();
@@ -37,17 +37,17 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
     } elseif ($_GET['url'] == "register") {
 
         if (isset($_POST['inscription'])) {
-            registerCheck();
+            signUp();
         } else {
             registerForm();
         }
     } elseif ($_GET['url'] == "blog") {
 
         if (isset($_GET['deletePost'])) {
-            postDelete();
+            postDelete($_GET['deletePost']);
             listAllPosts();
         } else if (isset($_GET['id'])) {
-            updateView();
+            updateView($_GET['id']);
 
             if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
                 updatePost();
@@ -57,12 +57,12 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
             listAllPosts();
         }
     } elseif ($_GET['url'] == "post") {
-        displayPost();
+        displayPost($_GET['id']);
 
         if (isset($_GET['action']) && ($_GET['action'] == 'flag')) {
-            addFlag();
+            addFlag($_GET['comId']);
         }
     } elseif ($_GET['url'] == 'addComment') {
-        commentCheck();
+        commentCheck($_GET['id'], $_POST['author'], $_POST['comment']);
     }
 } else require_once("controller/home.php");

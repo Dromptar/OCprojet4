@@ -76,6 +76,11 @@ section#comments aside
     color: rgb(237,233,215);
 }
 
+input#author, textarea#comment
+{
+    width: 100%;
+}
+
 aside#comment_display
 {
     width: 50%;

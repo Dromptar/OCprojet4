@@ -33,11 +33,10 @@
 
         <form action="<?=$GLOBALS['nomDeDomaine']?>?url=addComment&amp;id=<?= $post['id'] ?>" method="post">
             <div>
-                <label><input type="text" id="author" name="author">Auteur</input></label><br />
+                <input type="text" id="author" name="author" placeholder="Auteur" />
             </div>
             <div>
-                <label for="comment">Commentaire</label><br />
-                <textarea id="" name="comment"></textarea>
+                <textarea id="comment" name="comment" placeholder="Ajouter un commentaire"></textarea>
             </div>
             <div>
                 <input type="submit" name="validate" value="Commenter" />

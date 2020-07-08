@@ -18,29 +18,31 @@ function listAllPosts()
     require_once("view/blogView.php");
 }
 
+
 /**
- * displayPostCheck
+ * displayPost
  * recupere 1 post via son ID et l'affiche sur la page postView
- * 
+ * @param  int $id
  * @return void
  */
-function displayPost()
+function displayPost($id)
 {
-    if (isset($_GET['id']) && $_GET['id'] > 0) {
+    if (isset($id) && $id > 0) {
         $postManager = new PostManager();
         $commentManager = new CommentManager();
 
-        $post = $postManager->getPost($_GET['id']);
-        $comments = $commentManager->getComments($_GET['id']);
+        $post = $postManager->getPost($id);
+        $comments = $commentManager->getComments($id);
 
         require('view/postView.php');
     }
 }
 
 
+
 /**
  * post
- * controle aue les champs soient bien remplis et execute post en puliant le chapitre
+ * controle que les champs soient bien remplis et execute post en publiant le chapitre
  * @return void
  */
 function post()
@@ -55,32 +57,37 @@ function post()
     }
 }
 
+
 /**
  * postDelete
  * supprime un post un fonction de son ID
+ * @param  mixed $deletePost
  * @return void
  */
-function postDelete()
+function postDelete($deletePost)
 {
-    if (isset($_GET['deletePost']) && $_GET['deletePost'] > 0) {
+    if (isset($deletePost) && $deletePost > 0) {
         $postManager = new PostManager();
         $deletePost = $postManager->deletePost();
     }
 }
 
 
+
 /**
  * updateView
  * recupere  un post pour l afficher dans l'adminPostView pour pouvoir le mettre a jour
+ * @param  mixed $id
  * @return void
  */
-function updateView()
+function updateView($id)
 {
     $postManager = new PostManager();
-    $post = $postManager->getPost($_GET['id']);
+    $post = $postManager->getPost($id);
 
     require_once('view/adminPostView.php');
 }
+
 
 /**
  * updatePost

@@ -96,17 +96,17 @@ function updateView($id)
  */
 function updatePost()
 {
-    if (
-        isset($_POST['author']) && !empty($_POST['author'])
+    if ( isset($_POST['author']) && !empty($_POST['author'])
         && isset($_POST['title']) && !empty($_POST['title'])
         && isset($_POST['quote']) && !empty($_POST['quote'])
-        && isset($_POST['texteditor']) && !empty($_POST['texteditor'])
-    ) {
+        && isset($_POST['texteditor']) && !empty($_POST['texteditor'])) {
 
         $postManager = new PostManager();
         $updatePost = $postManager->updatePost();
+        header('Location: ' .$GLOBALS['nomDeDomaine']. '?url=blog');
 
-        header('Location: ' .$GLOBALS['nomDeDomaine']. '?url=post&id=' .$_GET['id']);
     }
 }
+
+
 

@@ -46,12 +46,12 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         if (isset($_GET['deletePost'])) {
             postDelete($_GET['deletePost']);
             listAllPosts();
-        } else if (isset($_GET['id'])) {
-            updateView($_GET['id']);
-
-            if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
+        } 
+        if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
                 updatePost();
-            }
+        }
+        else if (isset($_GET['id'])) {
+                updateView($_GET['id']);
         } else {
             post();
             listAllPosts();

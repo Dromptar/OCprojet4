@@ -33,7 +33,7 @@ section#edition form
     margin-bottom: 5px;
 }
 
-#publish
+input.publish
 {
     font-size: 1.5em;
     color: rgb(237,233,215);

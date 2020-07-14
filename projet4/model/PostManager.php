@@ -21,7 +21,7 @@ class PostManager extends Manager
         
         $db = $this->database;
         $req = $db->prepare('INSERT INTO posts(author, title, quote, content, date_post) 
-                                VALUES(:author, :title, :quote, :content, CURDATE())');
+                                VALUES(:author, :title, :quote, :content, NOW())');
         $req->execute(array(
                         'author' => $author,
                         'title' => $title,

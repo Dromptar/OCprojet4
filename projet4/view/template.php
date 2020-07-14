@@ -11,9 +11,8 @@ if(!isset($_SESSION)){
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no">
-        <meta name="description" content="Bienvenue dans mon humble univers." />
-        <meta name="keywords" content="bip bip" />
-        <meta name="author" content="nom" />
+        <meta name="description" content="Bienvenue sur le site de l'écrivain Jean Foerteroche. Vous y découvrerez les chapitres de son dernier livre : Billet simple pour l'Alaska." />
+        <meta name="author" content="Jean Forteroche" />
         <title><?= $title ?></title>
         <link href="public/css/main.css" rel="stylesheet" />
         <link href="public/images/bookicon.ico" rel="favicon" />

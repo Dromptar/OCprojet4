@@ -30,7 +30,7 @@ $title = 'Espace Admin'; ?>
                 <textarea id="texteditor" name="texteditor">Bonjour Jean !</textarea>
             </div>
             <div>
-                <input id="publish" type="submit" name="publish" value="Publier" />
+                <input class="publish" type="submit" name="publish" value="Publier" />
             </div>
     </form>
 

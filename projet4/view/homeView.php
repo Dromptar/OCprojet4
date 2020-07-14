@@ -1,4 +1,4 @@
-<?php $title = 'Home'; ?> 
+<?php $title = 'Home : Le site officiel de Jean Forteroche'; ?> 
 
 <?php ob_start(); ?>
 

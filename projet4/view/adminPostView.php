@@ -27,7 +27,7 @@ if(!isset($_SESSION)){
                 <textarea id="texteditor" name="texteditor" value=<?= nl2br($post['content']) ?>></textarea>
             </div>
             <div>
-            <input class="publish" type="submit" value="Actualiser" /></input>
+            <input class="publish" type="submit" value="Actualiser" />
             </div>
     </form>
 

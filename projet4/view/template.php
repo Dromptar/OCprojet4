@@ -7,15 +7,15 @@ if(!isset($_SESSION)){
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Bienvenue sur le site de l'écrivain Jean Foerteroche. Vous y découvrerez les chapitres de son dernier livre : Billet simple pour l'Alaska." />
         <meta name="author" content="Jean Forteroche" />
         <title><?= $title ?></title>
         <link href="public/css/main.css" rel="stylesheet" />
-        <link href="public/images/bookicon.ico" rel="favicon" />
+        <link rel="shortcut icon" href="public/images/favicon.ico" type="image/icon" />
         <script src="https://kit.fontawesome.com/75492b6bf6.js"></script>
         <script src="https://cdn.tiny.cloud/1/m4l5idahpp956ut9d7c8qydikp11k175cpm5zbdholz40oc1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     </head>

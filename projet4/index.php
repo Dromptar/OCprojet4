@@ -49,6 +49,7 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         } 
         if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
                 updatePost();
+                var_dump($_POST['texteditor']); 
         }
         else if (isset($_GET['id'])) {
                 updateView($_GET['id']);

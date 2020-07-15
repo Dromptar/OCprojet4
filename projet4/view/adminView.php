@@ -11,7 +11,6 @@ require_once("controller/blogComments.php");
 $title = 'Espace Admin'; ?>
 
 
-
 <?php ob_start(); ?>
 
 <p id="session"><?= $_SESSION['connected']?><br/>

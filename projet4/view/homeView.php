@@ -1,4 +1,4 @@
-<?php $title = 'Home : Le site officiel de Jean Forteroche'; ?> 
+<?php $title = 'Home - Le site officiel de Jean Forteroche'; ?> 
 
 <?php ob_start(); ?>
 
@@ -50,10 +50,8 @@
 <a href="#author-bio"><i class='fa fa-angle-double-down' id='scroll-icon'></i></a>
 
 <section id="author-bio">
-
   <div id="picture">
     <img src="public/images/writer.jpg" alt="writer">
-  
   </div>
   
   <div id="bio">

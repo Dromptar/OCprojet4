@@ -14,7 +14,7 @@ $title = 'Connexion'; ?>
 
     <div id="connect_formulaire">
 
-        <form class="logs" action="" method="POST">
+        <form class="logs" action="<?=$GLOBALS['nomDeDomaine']?>?url=connection" method="POST">
 
             <input class="logsInput" type="text" name="pseudo" placeholder="Identifiant" required/>
             <input class="logsInput" type="password" name="pass" placeholder="Mot de Passe" required/>

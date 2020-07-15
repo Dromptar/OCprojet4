@@ -6,7 +6,7 @@
 
     <div id="register_formulaire">
 
-        <form class="logs" action="" method="POST">
+        <form class="logs" action="<?=$GLOBALS['nomDeDomaine']?>?url=register" method="POST">
 
             <input class="logsInput" type="text" name="pseudo" placeholder="Identifiant" />
             <input class="logsInput" type="password" name="pass1" placeholder="Mot de passe" />

@@ -42,16 +42,15 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
             registerForm();
         }
     } elseif ($_GET['url'] == "blog") {
-
-        if (isset($_GET['deletePost'])) {
+        
+        if (isset($_GET['deletePost']) && isset($_SESSION['connected'])) {
             postDelete($_GET['deletePost']);
             listAllPosts();
         } 
         if (isset($_GET['action']) && ($_GET['action'] == 'update')) {
-                updatePost();
-                var_dump($_POST['texteditor']); 
+                updatePost(); 
         }
-        else if (isset($_GET['id'])) {
+        else if (isset($_GET['id']) && isset($_SESSION['connected'])) {
                 updateView($_GET['id']);
         } else {
             post();
@@ -66,4 +65,6 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
     } elseif ($_GET['url'] == 'addComment') {
         commentCheck($_GET['id'], $_POST['author'], $_POST['comment']);
     }
-} else require_once("controller/home.php");
+} else {
+    listLastPosts();
+}

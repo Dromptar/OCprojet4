@@ -75,4 +75,14 @@
         width: 20%;
         left: 50%;
     }
+ 
+}
+
+@media screen and (max-height: 380px) {
+
+    #register_formulaire 
+    {        
+        height: 65%;
+    }
+ 
 }

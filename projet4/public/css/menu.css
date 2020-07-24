@@ -78,13 +78,12 @@ nav a:visited
 
     #navTabs{
 
-        
         flex-direction: column;
         position: absolute;
         align-items: flex-start;
-        top: 44px;
-        right: 26px;
-        font-size: 1em;
+        top: 38px;
+        right: 33px;
+        font-size: 1.3em;
         background: url("../images/footer.jpg") repeat center center;
         background-color: rgba(0, 0, 0, 0);
         background-position-x: center;

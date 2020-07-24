@@ -75,3 +75,12 @@
         left: 50%;
     }
 }
+
+@media screen and (max-height: 380px) {
+
+    #connect_formulaire 
+    {        
+        height: 45%;
+    }
+ 
+}

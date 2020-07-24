@@ -53,6 +53,11 @@ section#posts
     font-size: 1.2em;
 }
 
+.post a
+{
+    text-decoration: none;
+}
+
 
 .read-button
 {

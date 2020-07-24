@@ -47,7 +47,7 @@ $title = 'Espace Admin'; ?>
         <div class="new-comment">
             <p><strong><?= htmlspecialchars($allCom['author']) ?></strong> le <?= $allCom['comment_date_fr'] ?></p>
             <p><?= nl2br(htmlspecialchars($allCom['comment'])) ?></p>
-            <p><?= nl2br(htmlspecialchars($allCom['flag'])) ?></p>
+            <p><strong>Ce commentaire a été signalé <?= nl2br(htmlspecialchars($allCom['flag'])) ?> fois.</strong></p>
             <a href ="<?=$GLOBALS['nomDeDomaine']?>?url=connection&deleteComment=<?= $allCom['id'] ?>">Supprimer</a>
         </div>  
         <?php

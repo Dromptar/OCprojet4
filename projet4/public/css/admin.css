@@ -72,6 +72,17 @@ p#session a:visited
     display: none;
 }
 
+#flagsManagerSpace .new-comment
+{
+    width: 50%;
+    margin: 0 auto 20px auto;
+}
+
+#flagsManagerSpace .new-comment a
+{
+    text-decoration: none;
+}
+
 @media screen and (max-width: 479px) {
 
     #editor_inputs

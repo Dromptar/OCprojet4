@@ -24,7 +24,7 @@ if(!isset($_SESSION)){
                 <label>Citation: <input type="text" id="quote" name="quote" value="<?= htmlspecialchars($post['quote']) ?>"/></label>
             </div>
             <div>
-                <textarea id="texteditor" name="texteditor" value=<?= nl2br($post['content']) ?>></textarea>
+                <textarea id="texteditor" name="texteditor"> <?= nl2br($post['content']) ?> </textarea>
             </div>
             <div>
             <input class="publish" type="submit" value="Actualiser" />

@@ -88,6 +88,8 @@ aside#comment_display
 
 .new-comment
 {
+    display: flex;
+    flex-direction: column;
     padding: 0 10px;
     background-color: rgb(237,233,215);
     margin: 20px 0;
@@ -96,6 +98,15 @@ aside#comment_display
     box-shadow: 5px 5px #373737;
     border-radius: 10px;
 }
+
+.new-comment a
+{
+    text-decoration: none;
+    align-self: end;
+    color:rgb(33, 30, 31);
+    font-size: 1.2em;
+}
+
 
 @media screen and (max-width: 479px) {
 

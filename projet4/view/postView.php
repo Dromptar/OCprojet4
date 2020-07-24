@@ -53,9 +53,8 @@
         ?>
         <div class="new-comment">
             <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-            <a href="<?=$GLOBALS['nomDeDomaine']?>?url=post&action=flag&id=<?= $post['id'] ?>
-            &comId=<?= $comment['id'] ?>">Signaler</a>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+            <a href="<?=$GLOBALS['nomDeDomaine']?>?url=post&action=flag&id=<?= $post['id'] ?>&comId=<?= $comment['id'] ?>" title="Signaler"><i class="fa fa-flag" aria-hidden="true"></i></a>
         </div>
             
         <?php
